@@ -1,7 +1,22 @@
 {
-"navbar": {
-"who_are_we": "¿Quienes somos?",
-"what_do_we": "¿Que hacemos?",
-"patrocinador": "Nuestro Patrocinador"
-}
+    "navbar": {
+        "who_are_we": "¿Quienes somos?",
+        "what_do_we": "¿Que hacemos?",
+        "patrocinador": "Nuestro Patrocinador",
+        "acceso": "ACCESO"
+    },
+    "header": {
+        "welcome": "Bienvenido a Immosensing",
+        "subtitle-header": "Redefiniendo la propiedad inmobiliaria desde el espacio",
+        "register": "Registrate!"
+    },
+    "cardService":{
+        "serviceOne": "Introduzca sus preferencias y nosotros encontraremos la mejor ubicación para usted basándonos en los datos de observación de la Tierra y en nuestros algoritmos de IA",
+        "serviceTwo": "Encontraremos una coincidencia entre sus preferencias y su vivienda ideal ya sea para alquilar, comprar o invertir",
+        "serviceThree": "Los compradores e inversores encuentran una ubicación perfecta. Los agentes inmobiliarios encuentran una lista curada de la demanda."
+
+    },
+    "sponsor": {
+        "title": "Nuestros Patrocionadores"
+    }
 }

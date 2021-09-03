@@ -1,5 +1,21 @@
 {
-  "navbar": {
-  "who_are_we": "Who are we?"
-}
+    "navbar": {
+        "who_are_we": "Who are we?",
+        "what_do_we": "¿What do we?",
+        "patrocinador": "Sponsors",
+        "acceso": "Log-In"
+    },
+    "header": {
+        "welcome": "Welcome to Immosensing",
+        "subtitle-header": "Redefining Real Estate from Space",
+        "register": "Sign Up!"
+    },
+    "cardService": {
+        "serviceOne": "Insert your preferences and we will find the best location for you based on Earth Observation data and our AI algorithms.",
+        "serviceTwo": "We will find a match between your preferences and your ideal home either for renting, buying or investing.",
+        "serviceThree": "Buyers and investors find a perfect location. Real estate agents find a curated list of demand."
+    },
+    "sponsor": {
+        "title": "Our Sponsors"
+    }
 }

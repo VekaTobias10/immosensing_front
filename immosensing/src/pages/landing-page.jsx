@@ -1,13 +1,15 @@
 import React from 'react';
-import MenuNavigator from '../components/components-landingpage/nav-bar';
 import HeaderLanding from '../components/components-landingpage/header-landing';
+import ServicesLanding from '../components/components-landingpage/services';
+import ForWhoLanding from '../components/components-landingpage/users';
 
 
 function LandingPage (){
     return (
         <React.Fragment>
-        <MenuNavigator></MenuNavigator>
         <HeaderLanding></HeaderLanding>
+        <ServicesLanding></ServicesLanding>
+        <ForWhoLanding></ForWhoLanding>
         </React.Fragment>
     );
 }

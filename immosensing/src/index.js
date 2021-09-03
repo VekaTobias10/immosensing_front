@@ -7,6 +7,8 @@ import {I18nextProvider} from "react-i18next";
 import i18next from "i18next";
 
 
+
+//IMPORTO LAS TRADUCCIONES
 import global_es from "./assets/translations/es/global.json";
 import global_en from "./assets/translations/en/global.json";
 
