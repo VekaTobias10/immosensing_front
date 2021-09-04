@@ -1,18 +1,22 @@
-body {
-font-family: 'Merriweather';
+* {
+
 margin:0;
 padding:0;
 box-sizing: border-box;
 }
 
 
+ body{
+  font-family:'Space Mono', monospace;
+} 
 
 @font-face {
-  font-family: 'Merriweather';
-  font-weight: 100;
-  src: url("./assets/fonts/Merriweather/Merriweather-Light.ttf");
+  font-family: 'Space Mono', monospace;
+  src: url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 }
 
+
+/*
 @font-face {
   font-family: 'Merriweather';
   font-weight:bold;
@@ -24,4 +28,4 @@ box-sizing: border-box;
   font-weight:normal;
   src: url("./assets/fonts/Merriweather/Merriweather-Regular.ttf");
 }
-
+ */ 

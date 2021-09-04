@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) => ({
         // backgroundImage: `url(${headerPhoto})`,
         background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${headerPhoto})`,
         position: 'relative',
-        paddingBottom:'5rem',
+        paddingBottom: '18rem',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
@@ -25,8 +25,6 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
         color: 'white',
         position: 'relative',
-        textDecoration: 'underline',
-        letterSpacing: '0.2rem',
         fontWeight: 'bold',
         width: '80%',
         margin: 'auto',
@@ -58,7 +56,7 @@ export const useStyles = makeStyles((theme) => ({
     },
 
     welcomeHeader: {
-        width: '40%',
+        width: '60%',
         border: '8px solid #0FCDB2',
         margin: '2rem auto 1.5rem',
         color: 'grey',
@@ -94,5 +92,19 @@ export const useStyles = makeStyles((theme) => ({
         color: 'white',
         width: '8rem',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-    }
+    },
+    searchContainer: {
+        width: '100%',
+        display:'flex',
+    },
+    cardBuscador: {
+        width: '25%',
+        margin: '5rem auto -20rem',
+        padding: '1rem',
+    },
+    buttonSearch:{
+        width: '30%',
+        backgroundColor: '#0FCDB2',
+        padding: '1rem',
+    },
 }));
