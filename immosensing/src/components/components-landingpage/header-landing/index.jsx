@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 // import {React, useContext} from 'react';
 // import { ThemeContext } from '../../../assets/themes/theme-context';
 import { useStyles } from "./style.js";
@@ -35,7 +36,7 @@ export default function HeaderLanding() {
         </ul>
         <div>
           <Button className={classes.btnAccess} variant="outlined">
-            {t("navbar.acceso")}
+          <Link to="/login"> {t("navbar.acceso")}</Link>
           </Button>
         </div>
         <div className={classes.containerButton}>
@@ -64,7 +65,7 @@ export default function HeaderLanding() {
       </div>
       <div className={classes.buttonRegisterContainer}>
         <Button variant="outlined" className={classes.buttonRegister}>
-          {t("header.register")}
+        <Link to="/register">{t("header.register")}</Link>
         </Button>
       </div>
 
