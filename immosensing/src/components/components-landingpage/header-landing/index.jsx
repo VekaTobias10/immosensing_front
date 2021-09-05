@@ -36,7 +36,7 @@ export default function HeaderLanding() {
         </ul>
         <div>
           <Button className={classes.btnAccess} variant="outlined">
-          <Link to="/login"> {t("navbar.acceso")}</Link>
+          <Link  className={classes.btnAccessDeco} to="/login"> {t("navbar.acceso")}</Link>
           </Button>
         </div>
         <div className={classes.containerButton}>
@@ -65,7 +65,7 @@ export default function HeaderLanding() {
       </div>
       <div className={classes.buttonRegisterContainer}>
         <Button variant="outlined" className={classes.buttonRegister}>
-        <Link to="/register">{t("header.register")}</Link>
+        <Link className={classes.buttonRegister} to="/register">{t("header.register")}</Link>
         </Button>
       </div>
 

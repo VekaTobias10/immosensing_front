@@ -40,7 +40,14 @@
         "email": "Email",
         "password":"Contraseña",
         "repeatPassword": "Repite la contraseña",
-        "btnSubmit": "Registrate"
+        "btnSubmit": "Registrate",
+        "wrongPass": "Las contraseñas no coinciden"
+    },
+    "validation":{
+        "emailSuccess": "Email validado con Éxito",
+        "emailError": "Email no es válido, intente registrarte de nuevo",
+        "loading":"Cargando..."
+        
     }
 
 }
