@@ -32,8 +32,15 @@
     },
     "login":{
         "email":"Email",
-        "password":"Password",
-        "checkText":"Recuerdame"
+        "password":"Contraseña",
+        "checkText":"Recuérdame"
+    },
+    "register":{
+        "title": "Registro",
+        "email": "Email",
+        "password":"Contraseña",
+        "repeatPassword": "Repite la contraseña",
+        "btnSubmit": "Registrate"
     }
 
 }

@@ -1,8 +1,9 @@
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ThemePage from './assets/themes/theme-wrapper-page';
-// import LandingPage from './pages/landing-page';
+import LandingPage from './pages/landing-page';
 import Login from './pages/login/login';
-// import PersonalDataRegister from './pages/register/register';
+import PersonalDataRegister from './pages/register/register';
 
 
 
@@ -10,12 +11,23 @@ import Login from './pages/login/login';
 function App() {
 
   return (
+    <React.Fragment>
+      <Router>
     <ThemePage>
-     {/* <LandingPage></LandingPage> */}
-     <Login></Login>
-     {/* <PersonalDataRegister></PersonalDataRegister> */}
+      <Switch>
+      <Route path="/register">
+      <PersonalDataRegister></PersonalDataRegister>
+      </Route>
+      <Route path="/login">
+       <Login></Login>
+      </Route>
+      <Route path="*">
+   <LandingPage></LandingPage>
+      </Route> 
+      </Switch>  
      </ThemePage>
-
+     </Router>
+     </React.Fragment>
   );
 }
 

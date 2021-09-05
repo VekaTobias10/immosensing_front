@@ -9,7 +9,7 @@ function ThemePage({children}) { //Componente Wrapper engloba a sus children y l
     const setTema = () => {
         console.log('modo =' , modo);
         // setModo(modo === themes.dark ? themes.light : themes.dark)
-        setModo((oldModeTheme)=> oldModeTheme  === themes.dark ? themes.light : themes.dark)
+        setModo((oldModeTheme)=> oldModeTheme  === themes.palette.dark ? themes.palette.light : themes.palette.dark)
     }
     
     return (
