@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 function PersonalDataRegister() {
   const classes = useStyles();
   const [t] = useTranslation("global");
+  const [invalidPass, setInvalidPass] = React.useState(false)
 
   const handleSubmit = (e) => {
     // gestiono el submit del formulario
@@ -18,6 +19,7 @@ function PersonalDataRegister() {
       if (e.target.pass.value === e.target.repeated_pass.value) {
         // solo ejecuto el registro si las passwords son iguales
         // genero el objeto options para llamar al login
+        setInvalidPass(false);
         const options = {
           method: "POST",
           headers: {
@@ -30,16 +32,14 @@ function PersonalDataRegister() {
           }),
         };
         // llamo al registro
-        fetch("http://localhost:4567/auth/register", options)
+        fetch("http://localhost:3001/auth/register", options)
           .then((r) => r.json())
           .then((d) => console.log(d)); 
       } else {
-        // Muestro al usuario el error de que las passwords no coinciden
+        setInvalidPass(true);
       }
-    } else {
-      // mostrar error al usuario con el campo que no es válido
     }
-  };
+  };   
 
 
   
@@ -91,8 +91,8 @@ function PersonalDataRegister() {
               // defaultValue="Adress"
               variant="outlined"
             />
-
-        <Button className={classes.buttonPrices} type="submit" variant="contained">
+         {invalidPass ? <p style={{ color: 'red' }}>{t("register.wrongPass")}</p> : <p></p>}
+        <Button className={classes.buttonSubmit} type="submit" variant="contained">
               {t("register.btnSubmit")}
             </Button>
           </form>

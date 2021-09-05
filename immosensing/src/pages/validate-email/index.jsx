@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom"; // importo el hook de location para obtener los query params
-import Login from "../login/login";
+import ValidationSuccess from "../validate-email/validate-msg";
+import ValidationError from "../validate-email/noValidate-msg";
+import LoadingPage from "../validate-email/loadingPage";
 
 // A custom hook that builds on useLocation to parse
 // the query string for you.
@@ -34,17 +36,17 @@ function ValidateEmail() {
   return (
     <React.Fragment>
       {isLoading ? (
-        <h1>Cargando...</h1>
+        <LoadingPage></LoadingPage>
       ) : isEmailValid ? (
-        <React.Fragment>
-          <h1>Email validado con éxito</h1>
-          <Login></Login>
+        <React.Fragment> 
+          <ValidationSuccess></ValidationSuccess>
         </React.Fragment>
       ) : (
-        <h1>Email no es válido</h1>
+        <ValidationError></ValidationError>
       )}
     </React.Fragment>
   );
 }
 
 export default ValidateEmail;
+

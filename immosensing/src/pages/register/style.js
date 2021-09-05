@@ -53,5 +53,8 @@ export const useStyles = makeStyles((theme) => ({
         width: '13%',
         margin:'0 auto 1rem',
     },
+    buttonSubmit: {
+        textDecoration:'none'
+    }
 
 }));
