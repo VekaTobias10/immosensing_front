@@ -38,6 +38,8 @@
     },
     "register":{
         "title": "Registro",
+        "name": "Nombre",
+        "lastName": "Apellido",
         "email": "Email",
         "password":"Contraseña",
         "repeatPassword": "Repite la contraseña",

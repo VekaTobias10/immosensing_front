@@ -27,6 +27,8 @@ function PersonalDataRegister() {
           },
           body: JSON.stringify({
             // Genero el body como string
+            name: e.target.name.value,
+            lastName: e.target.lastName.value,
             email: e.target.email.value, // obtengo el value de un input por su name
             password: e.target.pass.value,
           }),
@@ -61,6 +63,24 @@ function PersonalDataRegister() {
             autoComplete="off"
             // onSubmit={handleSubmit}
           >
+              <TextField
+              className={classes.inputData}
+              required
+              name="name"
+              label={t("register.name")}
+            //   ref={firstNameRef}
+              // defaultValue="First Name"
+              variant="outlined"
+            />
+              <TextField
+              className={classes.inputData}
+              required
+              name="lastName"
+              label={t("register.lastName")}
+            //   ref={firstNameRef}
+              // defaultValue="First Name"
+              variant="outlined"
+            />
             <TextField
               className={classes.inputData}
               required

@@ -18,6 +18,31 @@ function Login() {
     setChecked(event.target.checked);
   };
 
+  const handleSubmit = (e) => { // gestiono el submit del formulario
+    e.preventDefault();
+    if(e.target.checkValidity()){ // compruebo que todos los campos del formulario son validos
+        // genero el objeto options para llamar al login
+        const options = {
+            method: 'POST',
+            headers:{
+                'Content-type': 'application/json' // aviso a mi servidor que le envio los datos en formato JSON
+            },
+            body: JSON.stringify({ // Genero el body como string
+                email: e.target.email.value, // obtengo el value de un input por su name
+                password: e.target.pass.value
+            })
+        }
+        // llamo al login
+        fetch('http://localhost:3001/auth/login', options)
+        .then(r => r.json())
+        .then(d => console.log(d)) // aqui tendríamos el access token
+    }else{
+        // mostrar error al usuario con el campo que no es válido
+    }
+   
+  }
+
+
   return (
     <React.Fragment>
       <div className={classes.pageContainer}>
@@ -28,16 +53,19 @@ function Login() {
           className={classes.logoLanding}
           alt="logo-landing"
         ></img>
-          <form className={classes.root} noValidate>
+          <form className={classes.root} noValidate onSubmit={handleSubmit}>
             <InputBase
               className={classes.margin}
               required
+              name="email"
               placeholder={t("login.email")}
               inputProps={{ "aria-label": "naked" }}
             />
             <InputBase
               className={classes.margin}
               required
+              name="pass"
+              type="password"
               placeholder={t("login.password")}
               inputProps={{ "aria-label": "naked" }}
             />
@@ -51,7 +79,7 @@ function Login() {
               />
               <p className="text_check-box">{t("login.checkText")}</p>
             </div>
-            <Button className={classes.buttonlogin} variant="contained">
+            <Button type="submit" className={classes.buttonlogin} variant="contained">
               LOGIN
             </Button>
             {/* <Button className={classes.buttonlogin} variant="contained" onClick={() => push('/')} >LOGIN</Button> */}
