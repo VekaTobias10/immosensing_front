@@ -33,7 +33,8 @@
     "login":{
         "email":"Email",
         "password":"Contraseña",
-        "checkText":"Recuérdame"
+        "checkText":"Recuérdame",
+        "haveAccount": "No tienes cuenta?"
     },
     "register":{
         "title": "Registro",

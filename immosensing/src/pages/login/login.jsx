@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import InputBase from "@material-ui/core/InputBase";
 import { useStyles } from "./style.js";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -31,13 +32,13 @@ function Login() {
             <InputBase
               className={classes.margin}
               required
-              defaultValue={t("login.email")}
+              placeholder={t("login.email")}
               inputProps={{ "aria-label": "naked" }}
             />
             <InputBase
               className={classes.margin}
               required
-              defaultValue={t("login.password")}
+              placeholder={t("login.password")}
               inputProps={{ "aria-label": "naked" }}
             />
             <div className={classes.checkBox}>
@@ -57,10 +58,8 @@ function Login() {
 
             {/* <p className="link"><a className="link_color" href='#'>Forgot password?</a></p> */}
             <p className={classes.link}>
-            Don´t have an account? 
-              <a className="link_color" href>
-                Sign Up
-              </a>
+            {t("login.haveAccount")}
+            <Link to="/register">{t("header.register")}</Link>
             </p>
           </form>
         </div>
