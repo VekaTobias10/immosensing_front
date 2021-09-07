@@ -5,12 +5,29 @@ export const useStyles = makeStyles((theme) => ({
 
     mainCont:{
         padding: '5rem 4rem',
-        display: 'flex',
-        flexDirection:'column',
+        [theme.breakpoints.down('sm')]: {
+            padding: '2rem 2rem',
+        },
+        [theme.breakpoints.up('sm')]: {
+            padding: '2rem 2rem',
+        }
+
     },
     mainContainerWho: {
         width: '80%', 
         margin: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+        },
+        // [theme.breakpoints.up('sm')]: {
+        //     width: '100%',
+        //     textAlign: 'center',
+        //     display: 'flex',
+        //     flexDirection: 'column',
+        // }
     },
     titlePresentation:{
         width:'100%',

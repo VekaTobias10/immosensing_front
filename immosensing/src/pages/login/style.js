@@ -11,6 +11,7 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       margin: "auto",
+      width: '90%'
     }
   },
   accountContainer: {
@@ -19,9 +20,8 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     margin:'auto',
     [theme.breakpoints.down('sm')]: {
-      padding: "0rem",
-      borderRight: "none",
-      paddingBottom: "2.5rem",
+      padding: 0,
+      margin:0
     }
   },
   singupContainer: {
@@ -29,9 +29,6 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     padding: "2rem",
-    [theme.breakpoints.down('sm')]: {
-      padding: "0rem",
-    },
   },
   singupTitle: {
     fontWeight: "400",
@@ -55,7 +52,9 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     width: '40%',
     margin: 'auto',
-
+    [theme.breakpoints.down('sm')]: {
+      width: "90%",
+    }
   },
   margin: {
     margin: theme.spacing(1),
@@ -66,12 +65,18 @@ export const useStyles = makeStyles((theme) => ({
   },
   buttonlogin: {
     background: "#0FCDB2",
+    [theme.breakpoints.down('sm')]: {
+      marginTop: "2rem",
+    }
   },
 
 imgRegister:{
     minWidth:'100%',
     height: '100vh',
     borderLeft: '8px solid #0FCDB2',
+    [theme.breakpoints.down('sm')]: {
+      display: "none",
+    }
 
 },
 checkBox:{
@@ -81,6 +86,9 @@ checkBox:{
 logoLanding: {
     width: '13%',
     margin:'0 auto 1rem',
+    [theme.breakpoints.down('sm')]: {
+      width: "50%",
+    }
 },
 link:{
     marginTop: '1rem',

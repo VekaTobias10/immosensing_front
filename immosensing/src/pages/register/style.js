@@ -26,9 +26,6 @@ export const useStyles = makeStyles((theme) => ({
 
     personalDataInputTitelcontainer:{
         width: "100%",
-        [theme.breakpoints.down('sm')]: {
-            width:"fit-content",
-        }
     },
     inputOculto:{
         border:"none",
@@ -37,7 +34,10 @@ export const useStyles = makeStyles((theme) => ({
     imgBcn:{
         width:'100%',
         height:'100vh',
-        borderLeft:'8px solid #0FCDB2'
+        borderLeft:'8px solid #0FCDB2',
+        [theme.breakpoints.down('sm')]: {
+            display:"none",
+        }
        
     },
     checkboxContainer:{

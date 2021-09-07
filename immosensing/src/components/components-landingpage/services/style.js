@@ -14,6 +14,9 @@ export const useStyles = makeStyles((theme) => ({
         fontSize: '1rem',
         color: 'black',
         letterSpacing: '0.2rem',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%',
+        }
 
     },
     internalContainerServices: {
@@ -28,6 +31,12 @@ export const useStyles = makeStyles((theme) => ({
     containersCard: {
         display: 'flex',
         justifyContent: 'center',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+        },
     },
     root: {
         maxWidth: '27%',
@@ -35,6 +44,14 @@ export const useStyles = makeStyles((theme) => ({
         margin: '1.5rem',
         padding: '1.5rem',
         boxShadow: ' 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: '100%',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            margin:'1rem auto',
+            padding:'1rem'
+        },
     },
     iconServices: {
         fontSize: '80px',
