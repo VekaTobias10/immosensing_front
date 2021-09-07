@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import InputBase from "@material-ui/core/InputBase";
 import { useStyles } from "./style.js";
@@ -14,6 +15,8 @@ function Login() {
   const classes = useStyles();
   const [t] = useTranslation("global");
   const [checked, setChecked] = React.useState(false);
+  const myHistory = useHistory();
+
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
@@ -35,7 +38,10 @@ function Login() {
         // llamo al login
         fetch('http://localhost:3001/auth/login', options)
         .then(r => r.json())
-        .then(d => console.log(d)) // aqui tendríamos el access token
+        .then(d => {
+          sessionStorage.setItem("token", d.access_token); 
+          myHistory.push('/user');
+        }) // aqui tendríamos el access token
     }else{
         // mostrar error al usuario con el campo que no es válido
     }

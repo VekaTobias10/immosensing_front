@@ -5,6 +5,8 @@ import LandingPage from './pages/landing-page';
 import Login from './pages/login/login';
 import PersonalDataRegister from './pages/register/register';
 import ValidateEmail from './pages/validate-email/index';
+import UserPerfil from './pages/userPrivatePage/index';
+import PrivateRoute from './components/privateRoute/index';
 
 
 
@@ -16,6 +18,9 @@ function App() {
       <Router>
         <ThemePage>
           <Switch>
+          <PrivateRoute path='/user'>
+          <UserPerfil />
+        </PrivateRoute>
             <Route path="/register">
               <PersonalDataRegister></PersonalDataRegister>
             </Route>
@@ -25,7 +30,7 @@ function App() {
             <Route path="/validate-mail">
               <ValidateEmail></ValidateEmail>
             </Route>
-            <Route path="*">
+            <Route path="/">
               <LandingPage></LandingPage>
             </Route>
           </Switch>
