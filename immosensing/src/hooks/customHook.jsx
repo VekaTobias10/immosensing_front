@@ -9,8 +9,6 @@ export function useAuth (){
 
 
 
-
-
 export function useSession(){
     return sessionStorage.getItem('token'); 
 }
