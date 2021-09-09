@@ -40,13 +40,20 @@ function Login() {
         .then(r => r.json())
         .then(d => {
           sessionStorage.setItem("token", d.access_token); 
-          myHistory.push('/user');
+          if (d.status==='SUCCESS') myHistory.push('/dashboard');
+          if (d.status==='PENDING_SECOND_REGISTER') myHistory.push('/user');
         }) // aqui tendríamos el access token
     }else{
         // mostrar error al usuario con el campo que no es válido
     }
    
   }
+  //2.
+  // hacer un if
+// primera vez al user status pending de second register
+  // Cuando sea success tengo que redigir a otro lado
+//1.
+  //backend devuelva el estado en el login
 
 
   return (
