@@ -1,4 +1,4 @@
-function useAuth (){
+export function useAuth (){
     let myToken = sessionStorage.getItem("token");
 
    //  myEmail !== null ? <div>Hay un usuario</div> : <div>Tienes que estar logueado</div>
@@ -7,4 +7,12 @@ function useAuth (){
     
  }
 
- export default useAuth;
+
+
+
+
+export function useSession(){
+    return sessionStorage.getItem('token'); 
+}
+
+ 

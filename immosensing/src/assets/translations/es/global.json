@@ -3,7 +3,8 @@
         "who_are_we": "SERVICIOS",
         "what_do_we": "MISIÓN",
         "patrocinador": "RECONOCIMIENTO",
-        "acceso": "ACCESO"
+        "acceso": "ACCESO",
+        "logOut": "SALIR"
     },
     "header": {
         "welcome": "Bienvenido a Immosensing",
@@ -34,7 +35,8 @@
         "email":"Email",
         "password":"Contraseña",
         "checkText":"Recuérdame",
-        "haveAccount": "No tienes cuenta?"
+        "haveAccount": "No tienes cuenta?",
+        "ingresa": "Ingresa a tu cuenta"
     },
     "register":{
         "title": "Registro",
@@ -45,6 +47,15 @@
         "repeatPassword": "Repite la contraseña",
         "btnSubmit": "Registrate",
         "wrongPass": "Las contraseñas no coinciden"
+    },
+    "secondRegister":{
+        "title": "Completa tu registro:",
+        "estadoCivil": "Estado Civil",
+        "children": "Tiene hijos?",
+        "zone": "En que tipo de zona te gustaría vivir?",
+        "modalidad": "Tu modalidad de trabajo",
+        "btnSubmit": "Termina tu registro",
+        "rangoAlquiler": "Rango de alquiler"
     },
     "validation":{
         "emailSuccess": "Email validado con Éxito",

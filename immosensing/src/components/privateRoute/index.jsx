@@ -1,4 +1,4 @@
-import useAuth from '../../hooks/customHook';
+import {useAuth} from '../../hooks/customHook';
 import { Route,
     Redirect
   } from "react-router-dom";

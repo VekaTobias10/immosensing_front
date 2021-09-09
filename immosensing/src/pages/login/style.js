@@ -58,8 +58,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   margin: {
     margin: theme.spacing(1),
-    background: "#FAFAFA",
-    color: "#9E9E9E",
     height: "2.7rem",
 
   },

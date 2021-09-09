@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import {Link} from 'react-router-dom';
-import InputBase from "@material-ui/core/InputBase";
+import TextField from "@material-ui/core/TextField";
 import { useStyles } from "./style.js";
 import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
@@ -60,20 +60,30 @@ function Login() {
           alt="logo-landing"
         ></img>
           <form className={classes.root} noValidate onSubmit={handleSubmit}>
-            <InputBase
+            <TextField
               className={classes.margin}
               required
               name="email"
-              placeholder={t("login.email")}
-              inputProps={{ "aria-label": "naked" }}
+              // variant="outlined"
+              label={t("login.email")}
+              InputLabelProps={{
+                style:{
+                    color: '#0FCDB2',
+                }
+            }}
             />
-            <InputBase
+            <TextField
               className={classes.margin}
               required
               name="pass"
               type="password"
-              placeholder={t("login.password")}
-              inputProps={{ "aria-label": "naked" }}
+              // variant="outlined"
+              label={t("login.password")}
+              InputLabelProps={{
+                style:{
+                    color: '#0FCDB2',
+                }
+            }}
             />
             <div className={classes.checkBox}>
               <Checkbox
@@ -86,7 +96,7 @@ function Login() {
               <p className="text_check-box">{t("login.checkText")}</p>
             </div>
             <Button type="submit" className={classes.buttonlogin} variant="contained">
-              LOGIN
+            {t("login.ingresa")}
             </Button>
             {/* <Button className={classes.buttonlogin} variant="contained" onClick={() => push('/')} >LOGIN</Button> */}
 

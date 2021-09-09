@@ -1,18 +1,25 @@
-import React from "react";
-import {Link} from 'react-router-dom';
-// import {React, useContext} from 'react';
+import { Link } from "react-router-dom";
+import React, { useContext } from "react";
 // import { ThemeContext } from '../../../assets/themes/theme-context';
 import { useStyles } from "./style.js";
 import logoimmosensing from "../../../assets/img/landingpage-img/logoimmosensing.png";
 import { Button, Card, TextField } from "@material-ui/core";
-import {Search} from '@material-ui/icons';
+import { Search } from "@material-ui/icons";
+import Switch from "@material-ui/core/Switch";
 import { useTranslation } from "react-i18next";
+import { ThemeContext } from "../../../assets/themes/theme-wrapper-page";
+import { useAuth } from "../../../hooks/customHook";
 
 export default function HeaderLanding() {
   const classes = useStyles();
+  const { isDark, changeTheme } = useContext(ThemeContext);
   // const Theme = useContext(ThemeContext);
   // const [modo, setTema ] = Theme;
   const [t, i18n] = useTranslation("global");
+
+  const handleChangeTheme = () => {
+    changeTheme((prevDark) => !prevDark); // cambiamos el check del boton del tema
+  };
 
   return (
     // style={{background:modo.backgroundColor, color: modo.color}}
@@ -36,7 +43,17 @@ export default function HeaderLanding() {
         </ul>
         <div>
           <Button className={classes.btnAccess} variant="outlined">
-          <Link  className={classes.btnAccessDeco} to="/login"> {t("navbar.acceso")}</Link>
+            {useAuth ? (
+              <Link className={classes.btnAccessDeco} to="/logOut">
+                {" "}
+                {t("navbar.logOut")}
+              </Link>
+            ) : (
+              <Link className={classes.btnAccessDeco} to="/login">
+                {" "}
+                {t("navbar.acceso")}
+              </Link>
+            )}
           </Button>
         </div>
         <div className={classes.containerButton}>
@@ -54,6 +71,11 @@ export default function HeaderLanding() {
           >
             EN
           </Button>
+          <Switch
+            checked={isDark}
+            onChange={handleChangeTheme}
+            color="secondary"
+          />
           {/* <Button onClick={setTema}>Dale click</Button> */}
         </div>
       </div>
@@ -65,13 +87,25 @@ export default function HeaderLanding() {
       </div>
       <div className={classes.buttonRegisterContainer}>
         <Button variant="outlined" className={classes.buttonRegister}>
-        <Link className={classes.buttonRegister} to="/register">{t("header.register")}</Link>
+          <Link className={classes.buttonRegister} to="/register">
+            {t("header.register")}
+          </Link>
         </Button>
       </div>
 
       <Card className={classes.cardBuscador}>
         <form className={classes.searchContainer} noValidate autoComplete="off">
-          <TextField className={classes.inputSearch} id="outlined-basic" label="Presupuesto" variant="outlined" />
+          <TextField
+            className={classes.inputSearch}
+            id="outlined-basic"
+            label="Presupuesto"
+            variant="outlined"
+            InputLabelProps={{
+              style: {
+                color: "#0FCDB2",
+              },
+            }}
+          />
           <Button className={classes.buttonSearch}>
             <Search />
           </Button>

@@ -1,25 +1,46 @@
-import React,{useState} from 'react';
-import {themes, ThemeContext} from './theme-context';
+import { createContext, useState } from "react";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 
 
-function ThemePage({children}) { //Componente Wrapper engloba a sus children y le está dando una funcionalidad de un contexto de tema
-  
-    const [modo, setModo] = useState(themes.light);
-    
-    const setTema = () => {
-        console.log('modo =' , modo);
-        // setModo(modo === themes.dark ? themes.light : themes.dark)
-        setModo((oldModeTheme)=> oldModeTheme  === themes.palette.dark ? themes.palette.light : themes.palette.dark)
-    }
-    
-    return (
-      <ThemeContext.Provider value= {[
-        modo,
-        setTema
-      ]}>
+
+// creamos el tema claro
+const lightTheme = createTheme({
+  palette: {
+    type: "light",
+    primary: {
+      main: "#0FCDB2",
+    },
+    secondary: {
+      main: "#ffffff",
+    },
+  },
+});
+
+// creamos el tema oscuro
+const darkTheme = createTheme({
+  palette: {
+    type: "dark",
+    primary: {
+      main: "#0FCDB2",
+    },
+    secondary: {
+      main: "#ffffff",
+    },
+  },
+});
+
+export const ThemeContext = createContext({}); // creamos un contexto para poder cambiar el tema
+
+export default function ThemeWrapper({ children }) {
+  const [isDark, changeTheme] = useState(false); // gestion de estado para refrescar
+  return (
+    //Cambiamos el tema en función de si es dark o light
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}> 
+      {/* Tenemos un contexto global para que cualquier componetne pueda cambiar el tema */}
+      <ThemeContext.Provider value={{ isDark, changeTheme }}>
+        {/* Renderizamos cualquier hijo de estre wrapper component */}
         {children}
-        </ThemeContext.Provider>
-    );
-  }
-  
-  export default ThemePage;
+      </ThemeContext.Provider>
+    </ThemeProvider>
+  );
+}

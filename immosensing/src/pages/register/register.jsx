@@ -43,12 +43,10 @@ function PersonalDataRegister() {
     }
   };   
 
-
   
   return (
     <div className={classes.personalDataBigcontainer}>
-      {/* <div className={classes.personalDataInputTitelcontainer}> */}
-    
+     
         <div className={classes.inputContainer}>
         <img
           src={logoimmosensing}
@@ -61,25 +59,30 @@ function PersonalDataRegister() {
             onSubmit={handleSubmit}
             noValidate
             autoComplete="off"
-            // onSubmit={handleSubmit}
           >
               <TextField
               className={classes.inputData}
               required
               name="name"
               label={t("register.name")}
-            //   ref={firstNameRef}
-              // defaultValue="First Name"
               variant="outlined"
+              InputLabelProps={{
+                style:{
+                    color: '#0FCDB2',
+                }
+            }}
             />
               <TextField
               className={classes.inputData}
               required
               name="lastName"
               label={t("register.lastName")}
-            //   ref={firstNameRef}
-              // defaultValue="First Name"
               variant="outlined"
+              InputLabelProps={{
+                style:{
+                    color: '#0FCDB2',
+                }
+            }}
             />
             <TextField
               className={classes.inputData}
@@ -87,9 +90,12 @@ function PersonalDataRegister() {
               type="email"
               name="email"
               label={t("register.email")}
-            //   ref={firstNameRef}
-              // defaultValue="First Name"
               variant="outlined"
+              InputLabelProps={{
+                style:{
+                    color: '#0FCDB2',
+                }
+            }}
             />
             <TextField
               className={classes.inputData}
@@ -97,9 +103,12 @@ function PersonalDataRegister() {
               type="password" 
               name="pass"
               label={t("register.password")}
-            //   ref={lastNameRef}
-              // defaultValue="Last Name"
               variant="outlined"
+              InputLabelProps={{
+                style:{
+                    color: '#0FCDB2',
+                }
+            }}
             />
             <TextField
               className={classes.bigInputData}
@@ -107,17 +116,18 @@ function PersonalDataRegister() {
               type="password"
               name="repeated_pass"
               label={t("register.repeatPassword")}
-            //   ref={addressRef}
-              // defaultValue="Adress"
               variant="outlined"
+              InputLabelProps={{
+                style:{
+                    color: '#0FCDB2',
+                }
+            }}
             />
          {invalidPass ? <p style={{ color: 'red' }}>{t("register.wrongPass")}</p> : <p></p>}
         <Button className={classes.buttonSubmit} type="submit" variant="contained">
               {t("register.btnSubmit")}
             </Button>
           </form>
-        {/* </div> */}
-       
       </div>
       <div className={classes.imgContainerPersonal}>
         <img className={classes.imgBcn} src={imgBcnRegister} alt="logo-movimiento" />
