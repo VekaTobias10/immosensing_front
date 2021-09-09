@@ -8,9 +8,6 @@ export const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             padding: '2rem 2rem',
         },
-        [theme.breakpoints.up('sm')]: {
-            padding: '2rem 2rem',
-        }
 
     },
     mainContainerWho: {
@@ -22,12 +19,6 @@ export const useStyles = makeStyles((theme) => ({
             display: 'flex',
             flexDirection: 'column',
         },
-        // [theme.breakpoints.up('sm')]: {
-        //     width: '100%',
-        //     textAlign: 'center',
-        //     display: 'flex',
-        //     flexDirection: 'column',
-        // }
     },
     titlePresentation:{
         width:'100%',
@@ -41,6 +32,9 @@ export const useStyles = makeStyles((theme) => ({
         display:'flex',
         flexDirection:'row',
         width: '100%',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+        },
     },
     containerTextPresentation:{
         margin:'1rem',
@@ -49,6 +43,10 @@ export const useStyles = makeStyles((theme) => ({
         margin: '2rem auto',
         padding: '2rem',
         fontSize: '1.2rem',
+        [theme.breakpoints.down('sm')]: {
+        margin: 0,
+        padding: 0,
+        },
     },
 
     root: {

@@ -45,7 +45,6 @@ export const useStyles = makeStyles((theme) => ({
 
     logoLanding: {
         width: '13%',
-
             [theme.breakpoints.down('sm')]: {
                 width: '50%',
             }

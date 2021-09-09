@@ -11,6 +11,9 @@ export const useStyles = makeStyles((theme) => ({
     mainContainerWho: {
         width: '80%', 
         margin: '1rem auto 2rem',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
     },
     titlePresentation:{
         margin: 'auto',
@@ -38,6 +41,9 @@ export const useStyles = makeStyles((theme) => ({
         width: '50%',
         // backgroundColor: ' #0FCDB2',
         margin: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
     },
     header: {
         display: 'flex',

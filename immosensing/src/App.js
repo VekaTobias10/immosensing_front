@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ThemePage from './assets/themes/theme-wrapper-page';
+import ThemeWrapper from './assets/themes/theme-wrapper-page';
 import LandingPage from './pages/landing-page';
 import Login from './pages/login/login';
 import PersonalDataRegister from './pages/register/register';
 import ValidateEmail from './pages/validate-email/index';
-import UserPerfil from './pages/userPrivatePage/index';
+import UserSecondRegister from './pages/userSecondRegister/index';
 import PrivateRoute from './components/privateRoute/index';
 
 
@@ -16,10 +16,10 @@ function App() {
   return (
     <React.Fragment>
       <Router>
-        <ThemePage>
+        <ThemeWrapper>
           <Switch>
           <PrivateRoute path='/user'>
-          <UserPerfil />
+          <UserSecondRegister />
         </PrivateRoute>
             <Route path="/register">
               <PersonalDataRegister></PersonalDataRegister>
@@ -34,7 +34,7 @@ function App() {
               <LandingPage></LandingPage>
             </Route>
           </Switch>
-        </ThemePage>
+        </ThemeWrapper>
       </Router>
     </React.Fragment>
   );
