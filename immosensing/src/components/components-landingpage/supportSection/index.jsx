@@ -77,6 +77,7 @@ function SwipeableTextMobileStepper() {
         steps={maxSteps}
         position="static"
         variant="text"
+        className={classes.btnBottomSupport}
         activeStep={activeStep}
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>

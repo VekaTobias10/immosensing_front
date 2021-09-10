@@ -1,23 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ThemeWrapper from './assets/themes/theme-wrapper-page';
 import LandingPage from './pages/landing-page';
 import Login from './pages/login/login';
 import PersonalDataRegister from './pages/register/register';
 import ValidateEmail from './pages/validate-email/index';
 import UserSecondRegister from './pages/userSecondRegister/index';
 import PrivateRoute from './components/privateRoute/index';
+import Dashboard from './pages/dashboard/dashboard';
 
 
 
 
 function App() {
+ 
+
 
   return (
     <React.Fragment>
       <Router>
-        <ThemeWrapper>
+       
           <Switch>
+          <PrivateRoute path='/dashboard'>
+          <Dashboard />
+        </PrivateRoute>
           <PrivateRoute path='/user'>
           <UserSecondRegister />
         </PrivateRoute>
@@ -34,7 +39,6 @@ function App() {
               <LandingPage></LandingPage>
             </Route>
           </Switch>
-        </ThemeWrapper>
       </Router>
     </React.Fragment>
   );

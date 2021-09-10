@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useContext } from "react";
-// import { ThemeContext } from '../../../assets/themes/theme-context';
+import React, { useContext} from "react";
 import { useStyles } from "./style.js";
 import logoimmosensing from "../../../assets/img/landingpage-img/logoimmosensing.png";
 import { Button, Card, TextField } from "@material-ui/core";
@@ -12,17 +11,16 @@ import { useAuth } from "../../../hooks/customHook";
 
 export default function HeaderLanding() {
   const classes = useStyles();
-  const { isDark, changeTheme } = useContext(ThemeContext);
-  // const Theme = useContext(ThemeContext);
-  // const [modo, setTema ] = Theme;
   const [t, i18n] = useTranslation("global");
+  const {isDark, changeTheme} = useContext(ThemeContext);
+  
 
   const handleChangeTheme = () => {
     changeTheme((prevDark) => !prevDark); // cambiamos el check del boton del tema
   };
-
+ 
+ 
   return (
-    // style={{background:modo.backgroundColor, color: modo.color}}
     <div className={classes.mainNavBar}>
       <div className={classes.containerNavBar}>
         <img

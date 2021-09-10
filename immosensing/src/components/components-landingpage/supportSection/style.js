@@ -58,5 +58,8 @@ export const useStyles = makeStyles((theme) => ({
         overflow: 'hidden',
         width: '100%',
     },
+    btnBottomSupport:{
+        display:'none'
+    },
 
 }));

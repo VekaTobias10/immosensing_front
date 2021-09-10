@@ -55,10 +55,14 @@ export const useStyles = makeStyles((theme) => ({
         margin: '1rem',
     },
     header: {
-        display: 'flex',
+        display:'none',
         alignItems: 'center',
         height: 50,
         paddingLeft: theme.spacing(4),
+        
+    },
+    btnImgBottom:{
+     display:'none',
     },
     img: {
         height: '50vh',
