@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ThemeWrapper from './assets/themes/theme-wrapper-page';
 import {I18nextProvider} from "react-i18next";
 import i18next from "i18next";
 
@@ -29,9 +30,11 @@ i18next.init({
 
 ReactDOM.render(
   <React.StrictMode>
+     <ThemeWrapper>
     <I18nextProvider i18n={i18next}>
     <App />
     </I18nextProvider>
+    </ThemeWrapper>
   </React.StrictMode>,
   document.getElementById('root')
 );

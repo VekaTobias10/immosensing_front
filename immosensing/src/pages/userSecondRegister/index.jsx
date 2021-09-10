@@ -6,6 +6,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Button from "@material-ui/core/Button";
 import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
+import { useHistory } from "react-router-dom";
 // import {React, useContext} from 'react';
 // import { ThemeContext } from '../../../assets/themes/theme-context';
 import logoimmosensing from "../../assets/img/landingpage-img/logoimmosensing.png";
@@ -22,6 +23,7 @@ export default function UserSecondRegister() {
   const [trabajo, setTrabajo] = React.useState("");
   const [estadoCivil, setEstadoCivil] = React.useState("");
   const sessionToken = useSession();
+  const myHistory = useHistory();
 
   const handleChange = (event) => {
     setZone(event.target.value);
@@ -59,13 +61,13 @@ export default function UserSecondRegister() {
           hijos: e.target.hijos.value,
           tipoDeZonaPreferido: e.target.tipoDeZonaPreferido.value,
           modalidadTrabajo: e.target.modalidadTrabajo.value,
-          rangosAlquiler: e.target.rangosAlquiler.value,
+          rangoAlquiler: e.target.rangoAlquiler.value,
         }),
       };
       // llamo al registro
-      fetch("http://localhost:3001/user", options)
-        .then((r) => r.json())
-        .then((d) => console.log(d));
+      fetch("http://localhost:3001/user", options).then((r) => {
+        if (r.ok) myHistory.push("/dashboard");
+      });
     }
   };
 
@@ -189,7 +191,7 @@ export default function UserSecondRegister() {
               <Select
                 native
                 id="demo-simple-select-outlined"
-                name="rangosAlquiler"
+                name="rangoAlquiler"
                 value={alquiler}
                 onChange={handleChangeAlquiler}
                 fullWidth
