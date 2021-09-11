@@ -62,6 +62,9 @@
         "emailError": "Email no es válido, intente registrarte de nuevo",
         "loading":"Cargando..."
         
+    },
+    "map":{
+       "neighborhood": "Barrios"
     }
 
 }

@@ -9,7 +9,8 @@ export const useStyles = makeStyles((theme) => ({
      backgroundRepeat: 'no-repeat',
      backgroundPosition: 'bottom',
      padding:'3rem',
-     borderTop:'8px solid #0FCDB2',
+     borderTop:'8px solid',
+     borderColor: theme.palette.primary.main,
      textAlign:'center',
      lineHeight:'2rem',
      color: 'white'

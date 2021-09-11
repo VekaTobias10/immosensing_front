@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
     mainContainerServices: {
-        backgroundColor: '#0FCDB2',
+        backgroundColor: theme.palette.primary.main,
         padding: '1rem',
     },
     servicesContainer: {
@@ -12,7 +12,7 @@ export const useStyles = makeStyles((theme) => ({
         margin: '5rem auto',
         width: '80%',
         fontSize: '1rem',
-        color: 'black',
+        color: theme.palette.secondary.main,
         letterSpacing: '0.2rem',
         [theme.breakpoints.down('sm')]: {
             width: '90%',
@@ -26,7 +26,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     titleService:{
         margin: '1rem auto 1rem',
-        color: 'white'
+        color: theme.palette.secondary.main
     },
     containersCard: {
         display: 'flex',
@@ -55,7 +55,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     iconServices: {
         fontSize: '80px',
-        color: '#0FCDB2',
+        color: theme.palette.primary.main,
         width: '100%',
         margin: '0rem auto',
     }
