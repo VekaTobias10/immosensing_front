@@ -17,34 +17,34 @@ export default function ServicesLanding() {
           <h1 className={classes.titleService}>{t("cardService.title")}</h1>
         </div>
         <div className={classes.containersCard}>
-        <Card className={classes.root}>
+        <Card color='secondary' className={classes.root}>
           <LocationOnTwoToneIcon
             className={classes.iconServices}
           ></LocationOnTwoToneIcon>
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2"component="p">
               {t("cardService.serviceOne")}
             </Typography>
           </CardContent>
         </Card>
 
-        <Card className={classes.root}>
+        <Card color='secondary' className={classes.root}>
           <FindInPageTwoToneIcon
             className={classes.iconServices}
           ></FindInPageTwoToneIcon>
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" component="p">
               {t("cardService.serviceTwo")}
             </Typography>
           </CardContent>
         </Card>
 
-        <Card className={classes.root}>
+        <Card color='secondary' className={classes.root}>
           <MonetizationOnTwoToneIcon
             className={classes.iconServices}
           ></MonetizationOnTwoToneIcon>
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" component="p">
               {t("cardService.serviceThree")}
             </Typography>
           </CardContent>

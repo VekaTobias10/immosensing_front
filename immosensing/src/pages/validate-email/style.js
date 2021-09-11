@@ -53,7 +53,7 @@ export const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
     },
     buttonRegister: {
-        color: '#0FCDB2',
+        color: theme.palette.primary.main,
         fontSize: '1.2rem',
         textDecoration:'none'
     },

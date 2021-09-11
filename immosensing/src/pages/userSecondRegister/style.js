@@ -70,7 +70,7 @@ export const useStyles = makeStyles((theme) => ({
 
 
     buttonSubmit: {
-        backgroundColor: '#0FCDB2',
+        backgroundColor: theme.palette.primary.main,
         color: 'white',
         fontSize: '1.2rem',
         textDecoration:'none'

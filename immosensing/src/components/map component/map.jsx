@@ -1,59 +1,69 @@
 import React from "react";
-// import React,{useEffect, useRef} from "react";
-import { MapContainer, TileLayer, Marker, Popup,GeoJSON } from "react-leaflet";
-// import L from 'leaflet';
+import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from "leaflet";
 import { useStyles } from "./style.js";
-import BcnBarriosData from './lat-long-barrios-bcn.json';
+import BcnBarriosData from "./lat-long-barrios-bcn.json";
+import { useTranslation } from "react-i18next";
 
 function MapBcn() {
-    const classes = useStyles();
-    // const mapRef = useRef();
+  const classes = useStyles();
+  const [t] = useTranslation("global");
+  const Barcelona = [41.390205, 2.154007];
+  const HortaGuinardo = [41.41849, 2.1677];
+  const santsMontjuic = [41.37263,2.1546];
 
-    // useEffect(()=>{
-    //     const {current={}}= mapRef;
-    //     const {leafletElement: map} = current;
-    //     if (!map) return;
-    //     console.log(map);
-    //     const BarriosGeoJson = new L.GeoJSON(BcnBarriosData);
+  return (
+    <div>
+      <MapContainer
+        className={classes.map}
+        center={Barcelona}
+        zoom={13}
+        scrollWheelZoom={false}
+      >
+        <GeoJSON key={BcnBarriosData} data={BcnBarriosData}></GeoJSON>
+        <TileLayer
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={HortaGuinardo} icon={
+            new Icon({
+              iconUrl: markerIconPng,
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+            })
+          }>
+          <Popup>
+            Horta Guinardó <br /> 11 {t("map.neighborhood")} 
+          </Popup>
+        </Marker>
+        <Marker position={santsMontjuic} icon={
+            new Icon({
+              iconUrl: markerIconPng,
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+            })
+          }>
+          <Popup className={classes.popupStyle}>
+            <em>Sants Montjuic</em> <br /> 
+            <strong>8 {t("map.neighborhood")}</strong> <br/>
+            <ul>
+                <li>la Bordeta</li>
+                <li>Hostafrancs</li>
+                <li>La Marina de Puerto</li>
+                <li>La Font de la Guatlla</li>
+                <li>La Marina del Prat Vermell</li>
+                <li>El Poble Sec</li>
+                <li>Santos</li>
+                <li>Sants-Badal</li>
+            </ul>
+          </Popup>
+        </Marker>
+      </MapContainer>
+      {/* <button onClick={barcelonetaFilter}>Filtra</button> */}
+    </div>
+  );
+}
 
-    //     BarriosGeoJson.addTo(map);
-    // },[]);
-
-    return (
-      <div>
-        <MapContainer
-          className={classes.map}
-          center={[41.390205, 2.154007]}
-          zoom={13}
-          scrollWheelZoom={false}
-        //   ref={mapRef}
-        >
-         <GeoJSON key={BcnBarriosData} data={BcnBarriosData}></GeoJSON>
-          <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker
-            position={[51.505, -0.09]}
-            icon={
-              new Icon({
-                iconUrl: markerIconPng,
-                iconSize: [25, 41],
-                iconAnchor: [12, 41],
-              })
-            }
-          >
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer>
-      </div>
-    );
-  }
-  
-  export default MapBcn;
-  
+export default MapBcn;

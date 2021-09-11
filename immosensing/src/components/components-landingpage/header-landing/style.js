@@ -23,7 +23,7 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         padding: '1.5rem',
         justifyContent: 'space-between',
-        color: 'white',
+        color: theme.palette.primary.main,
         position: 'relative',
         fontWeight: 'bold',
         width: '80%',
@@ -70,7 +70,7 @@ export const useStyles = makeStyles((theme) => ({
             }
     },
     button_lang2: {
-        color: '#0FCDB2',
+        color: theme.palette.primary.main,
         margin: '0.3rem',
 
         [theme.breakpoints.down('sm')]: {
@@ -86,7 +86,8 @@ export const useStyles = makeStyles((theme) => ({
 
     welcomeHeader: {
         width: '60%',
-        border: '8px solid #0FCDB2',
+        border: '8px solid',
+        borderColor: theme.palette.primary.main,
         margin: '2rem auto 1.5rem',
         color: 'grey',
         padding: '1rem',
@@ -116,7 +117,7 @@ export const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
     },
     buttonRegister: {
-        color: '#0FCDB2',
+        color: theme.palette.primary.main,
         fontSize: '1.2rem',
 
     },
@@ -124,8 +125,7 @@ export const useStyles = makeStyles((theme) => ({
         textDecoration: 'none'
     },
     btnAccess: {
-        backgroundColor: '#0FCDB2',
-        color: 'white',
+        color: theme.palette.primary.main,
         width: '8rem',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         textDecoration: 'none'
@@ -147,7 +147,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     buttonSearch: {
         width: '30%',
-        backgroundColor: '#0FCDB2',
+        backgroundColor: theme.palette.primary.main,
         padding: '1rem',
     },
 }));

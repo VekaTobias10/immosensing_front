@@ -24,28 +24,28 @@ export const useStyles = makeStyles((theme) => ({
       margin:0
     }
   },
-  singupContainer: {
-    display: "flex",
-    flexDirection: "column",
-    width: "100%",
-    padding: "2rem",
-  },
-  singupTitle: {
-    fontWeight: "400",
-    fontStyle: "normal",
-    fontSize: "2rem",
-    color: "#9E9E9E",
-    margin: "1.5rem 0rem",
-  },
-  singupParagraph: {
-    fontWeight: "400",
-    fontStyle: "normal",
-    fontSize: "1.1rem",
-    color: "#9E9E9E",
-    lineHeight: "2rem",
-    letterSpacing: "0.009rem",
-    maxWidth: "58%",
-  },
+  // singupContainer: {
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   width: "100%",
+  //   padding: "2rem",
+  // },
+  // singupTitle: {
+  //   fontWeight: "400",
+  //   fontStyle: "normal",
+  //   fontSize: "2rem",
+  //   color: "#9E9E9E",
+  //   margin: "1.5rem 0rem",
+  // },
+  // singupParagraph: {
+  //   fontWeight: "400",
+  //   fontStyle: "normal",
+  //   fontSize: "1.1rem",
+  //   color: "#9E9E9E",
+  //   lineHeight: "2rem",
+  //   letterSpacing: "0.009rem",
+  //   maxWidth: "58%",
+  // },
   root: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -62,7 +62,7 @@ export const useStyles = makeStyles((theme) => ({
 
   },
   buttonlogin: {
-    background: "#0FCDB2",
+    background: theme.palette.primary.main,
     [theme.breakpoints.down('sm')]: {
       marginTop: "2rem",
     }

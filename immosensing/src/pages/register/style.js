@@ -34,7 +34,8 @@ export const useStyles = makeStyles((theme) => ({
     imgBcn:{
         width:'100%',
         height:'100vh',
-        borderLeft:'8px solid #0FCDB2',
+        borderLeft:'8px solid',
+        borderColor: theme.palette.primary.main,
         [theme.breakpoints.down('sm')]: {
             display:"none",
         }
@@ -54,7 +55,9 @@ export const useStyles = makeStyles((theme) => ({
         margin:'0 auto 1rem',
     },
     buttonSubmit: {
-        textDecoration:'none'
+        textDecoration:'none',
+        background: theme.palette.primary.main,
+        color: theme.palette.secondary.main,
     }
 
 }));
