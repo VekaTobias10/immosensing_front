@@ -7,7 +7,7 @@ import ValidateEmail from './pages/validate-email/index';
 import UserSecondRegister from './pages/userSecondRegister/index';
 import PrivateRoute from './components/privateRoute/index';
 import Dashboard from './pages/dashboard/dashboard';
-
+import HomeUser from './pages/homeUser/index';
 
 
 
@@ -23,7 +23,10 @@ function App() {
           <PrivateRoute path='/dashboard'>
           <Dashboard />
         </PrivateRoute>
-          <PrivateRoute path='/user'>
+          <PrivateRoute path='/homeUser'>
+          <HomeUser />
+        </PrivateRoute>
+          <PrivateRoute path='/secondRegister'>
           <UserSecondRegister />
         </PrivateRoute>
             <Route path="/register">

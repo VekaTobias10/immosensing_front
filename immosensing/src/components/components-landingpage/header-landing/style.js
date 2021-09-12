@@ -139,9 +139,10 @@ export const useStyles = makeStyles((theme) => ({
         width: '25%',
         margin: '5rem auto -20rem',
         padding: '1rem',
+        color:theme.palette.secondary.main,
         [theme.breakpoints.down('sm')]: {
             width: '80%',
-            margin: '5rem auto -20rem',
+            margin: '5rem auto -18rem',
         }
 
     },

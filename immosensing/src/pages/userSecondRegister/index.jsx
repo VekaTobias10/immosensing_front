@@ -66,7 +66,7 @@ export default function UserSecondRegister() {
       };
       // llamo al registro
       fetch("http://localhost:3001/user", options).then((r) => {
-        if (r.ok) myHistory.push("/dashboard");
+        if (r.ok) myHistory.push("/homeUser");
       });
     }
   };

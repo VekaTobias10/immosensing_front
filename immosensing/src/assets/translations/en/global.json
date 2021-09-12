@@ -16,6 +16,49 @@
         "serviceThree": "Buyers and investors find a perfect location. Real estate agents find a curated list of demand."
     },
     "sponsor": {
-        "title": "Our Sponsors"
+        "title": "Our Sponsors",
+        "text-msg": "We know that buying a home is the biggest investment of your life, and nowadays, we seem to have much more information about our daily digital purchases than about where we are going to spend our lives. Immosensing's goal is to provide the best location and offers based on your preferences when looking for a place to live."
+    },
+    "footer":{
+        "politic":"Terms and Conditions",
+        "conditions":"Privacy policies",
+        "copyright":"© 2021 Immosensing"
+    },
+    "login":{
+        "email":"Email",
+        "password":"Password",
+        "checkText":"Remember me",
+        "haveAccount": "Do not have an account?",
+        "ingresa": "Login"
+    },
+    "register":{
+        "title": "Register",
+        "name": "Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "password":"Password",
+        "repeatPassword": "Repeat your password",
+        "btnSubmit": "Continue your registration",
+        "wrongPass": "Passwords do not match"
+    },
+    "secondRegister":{
+        "title": "Complete your registration:",
+        "estadoCivil": "Civil status",
+        "children": "Number of children",
+        "zone": "What kind of area would you like to live in?",
+        "modalidad": "Work modality",
+        "btnSubmit": "Finish",
+        "rangoAlquiler": "Rental range"
+    },
+    "validation":{
+        "emailSuccess": "Email successfully validated",
+        "emailError": "Email is invalid, please try to register again",
+        "loading":"Loading..."
+        
+    },
+    "map":{
+       "neighborhood": "Neighborhood"
     }
+
+    
 }

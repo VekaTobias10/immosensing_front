@@ -4,7 +4,9 @@ import { useStyles } from "./style.js";
 import { Button, Card, TextField } from "@material-ui/core";
 import { Search } from "@material-ui/icons";
 import { useTranslation } from "react-i18next";
+import logoimmosensing from "../../../assets/img/landingpage-img/logoimmosensing.png";
 import NavBar from '../navBar/index';
+import { useAuth } from "../../../hooks/customHook";
 
 export default function HeaderLanding() {
   const classes = useStyles();
@@ -14,6 +16,44 @@ export default function HeaderLanding() {
   return (
       <div className={classes.mainNavBar}>
       <NavBar></NavBar>
+      <div className={classes.containerNavBar}>
+        <img
+          src={logoimmosensing}
+          className={classes.logoLanding}
+          alt="logo-landing"
+        ></img>
+        <ul className={classes.containerList}>
+          <li className={classes.listItem}>
+            <a href>{t("navbar.who_are_we")}</a>
+          </li>
+          <li className={classes.listItem}>
+            <a href>{t("navbar.what_do_we")}</a>
+          </li>
+          <li className={classes.listItem}>
+            <a href>{t("navbar.patrocinador")}</a>
+          </li>
+        </ul>
+        <div>
+          <Button className={classes.btnAccess} variant="outlined">
+            {useAuth ? (
+              <Link className={classes.btnAccessDeco} to="/logOut">
+                {" "}
+                {t("navbar.logOut")}
+              </Link>
+            ) : (
+              <Link className={classes.btnAccessDeco} to="/login">
+                {" "}
+                {t("navbar.acceso")}
+              </Link>
+            )}
+          </Button>
+        </div>
+      </div>
+
+
+
+
+
       <div className={classes.welcomeHeader}>
         <h1 className={classes.titleImmo}>{t("header.welcome")}</h1>
         <h4 className={classes.subtitleHeader}>
@@ -34,11 +74,12 @@ export default function HeaderLanding() {
             id="outlined-basic"
             label="Presupuesto"
             variant="outlined"
-            // InputLabelProps={{
-            //   style: {
-            //     color: "#0FCDB2",
-            //   },
-            // }}
+            color='primary'
+            InputLabelProps={{
+            style: {
+             color: "#0FCDB2",
+             },
+            }}
           />
           <Button className={classes.buttonSearch}>
             <Search />

@@ -45,16 +45,16 @@
         "email": "Email",
         "password":"Contraseña",
         "repeatPassword": "Repite la contraseña",
-        "btnSubmit": "Registrate",
+        "btnSubmit": "Continúa tu registro",
         "wrongPass": "Las contraseñas no coinciden"
     },
     "secondRegister":{
         "title": "Completa tu registro:",
         "estadoCivil": "Estado Civil",
-        "children": "Tiene hijos?",
+        "children": "Numero de hijos?",
         "zone": "En que tipo de zona te gustaría vivir?",
-        "modalidad": "Tu modalidad de trabajo",
-        "btnSubmit": "Termina tu registro",
+        "modalidad": "Modalidad de trabajo",
+        "btnSubmit": "Finaliza",
         "rangoAlquiler": "Rango de alquiler"
     },
     "validation":{
