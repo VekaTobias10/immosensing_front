@@ -17,96 +17,20 @@ export const useStyles = makeStyles((theme) => ({
         width: '100%',
         height: '100%',
     },
-    containerNavBar: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        padding: '1.5rem',
-        justifyContent: 'space-between',
-        color: theme.palette.primary.main,
-        position: 'relative',
-        fontWeight: 'bold',
-        width: '80%',
-        margin: 'auto',
-            [theme.breakpoints.down('sm')]: {
-                width: '100%',
-                textAlign: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-                padding:'2rem'
-            },
-            // [theme.breakpoints.up('sm')]: {
-            //     width: '100%',
-            //     textAlign: 'center',
-            //     display: 'flex',
-            //     flexDirection: 'column',
-            // }
-    },
 
-    logoLanding: {
-        width: '13%',
-            [theme.breakpoints.down('sm')]: {
-                width: '50%',
-            }
-
-    },
-
-    containerList: {
-        listStyleType: 'none',
-        display: 'flex',
-        [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column',
-        }
-       
-    },
-    listItem: {
-        margin: '1rem'
-    },
     button_lang: {
         color: 'white',
         margin: '0.3rem',
-            [theme.breakpoints.down('sm')]: {
-                display: 'none',
-            }
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        }
     },
     button_lang2: {
-        color: theme.palette.primary.main,
         margin: '0.3rem',
 
         [theme.breakpoints.down('sm')]: {
             display: 'none',
         }
-
-    },
-    //Header
-    mainheader: {
-        width: '100%',
-        margin: 'auto'
-    },
-
-    welcomeHeader: {
-        width: '60%',
-        border: '8px solid',
-        borderColor: theme.palette.primary.main,
-        margin: '2rem auto 1.5rem',
-        color: 'grey',
-        padding: '1rem',
-        textAlign: 'left',
-        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
-        }
-    },
-
-    titleImmo: {
-        fontSize: '3rem',
-        color: 'white',
-    },
-    subtitleHeader: {
-        marginTop: '1rem',
-        marginBottom: '1rem',
-        fontSize: '1.5rem',
-        color: 'white',
     },
     containerButton: {
         position: 'absolute',
@@ -125,10 +49,13 @@ export const useStyles = makeStyles((theme) => ({
         textDecoration: 'none'
     },
     btnAccess: {
-        color: theme.palette.primary.main,
+        backgroundColor: theme.palette.primary.main,
         width: '8rem',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         textDecoration: 'none'
     },
-  
+    navBarResponsive: {
+        backgroundColor: theme.palette.primary.main
+    }
+
 }));

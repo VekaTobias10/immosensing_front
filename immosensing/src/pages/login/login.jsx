@@ -40,8 +40,8 @@ function Login() {
         .then(r => r.json())
         .then(d => {
           sessionStorage.setItem("token", d.access_token); 
-          if (d.status==='SUCCESS') myHistory.push('/dashboard');
-          if (d.status==='PENDING_SECOND_REGISTER') myHistory.push('/user');
+          if (d.status==='SUCCESS') myHistory.push('/homeUser');
+          if (d.status==='PENDING_SECOND_REGISTER') myHistory.push('/secondRegister');
         }) // aqui tendríamos el access token
     }else{
         // mostrar error al usuario con el campo que no es válido
