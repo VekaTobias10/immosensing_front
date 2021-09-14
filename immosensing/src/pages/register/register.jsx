@@ -5,11 +5,62 @@ import Button from '@material-ui/core/Button';
 import imgBcnRegister from '../../assets/img/register/imgRegisterBcn.jpg';
 import logoimmosensing from "../../assets/img/landingpage-img/logoimmosensing.png";
 import { useTranslation } from "react-i18next";
+import Modal from '@material-ui/core/Modal';
+import { useHistory } from "react-router-dom";
 
-function PersonalDataRegister() {
+
+
+//------------Modal---------------------//
+
+function rand() {
+  return Math.round(Math.random() * 20) - 10;
+}
+
+function getModalStyle() {
+  const top = 50 + rand();
+  const left = 50 + rand();
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
+
+
+//----------------------------------------//
+
+
+export default function PersonalDataRegister() {
+  const myHistory = useHistory();
+  const [modalStyle] = React.useState(getModalStyle);
   const classes = useStyles();
   const [t] = useTranslation("global");
   const [invalidPass, setInvalidPass] = React.useState(false)
+
+
+ //--------------MODAL-------------------------//
+
+//  const [modalStyle] = React.useState(getModalStyle);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const body = (
+    <div style={modalStyle} className={classes.paper}>
+      <h2 id="simple-modal-title">Revisa tu correo</h2>
+      <h3>Accede a tu cuenta y completa tu registro</h3>
+    </div>
+  );
+
+
+//---------------------------------------//
 
   const handleSubmit = (e) => {
     // gestiono el submit del formulario
@@ -36,7 +87,10 @@ function PersonalDataRegister() {
         // llamo al registro
         fetch("http://localhost:3001/auth/register", options)
           .then((r) => r.json())
-          .then((d) => console.log(d)); 
+          .then((d) => {
+            sessionStorage.setItem("token", d.access_token); 
+            myHistory.push('/');
+          }) // aqui tendríamos el access token
       } else {
         setInvalidPass(true);
       }
@@ -124,9 +178,17 @@ function PersonalDataRegister() {
             }}
             />
          {invalidPass ? <p style={{ color: 'red' }}>{t("register.wrongPass")}</p> : <p></p>}
-        <Button className={classes.buttonSubmit} type="submit" variant="contained">
+        <Button className={classes.buttonSubmit} type="submit" variant="contained"  onClick={handleOpen}>
               {t("register.btnSubmit")}
             </Button>
+            <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+      >
+        {body}
+      </Modal>
           </form>
       </div>
       <div className={classes.imgContainerPersonal}>
@@ -135,4 +197,4 @@ function PersonalDataRegister() {
     </div>
   );
 }
-export default PersonalDataRegister;
+

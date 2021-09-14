@@ -7,11 +7,10 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     width: '100%',
-    height:'100vh',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       margin: "auto",
-      width: '90%'
+      width: '100%'
     }
   },
   accountContainer: {
@@ -90,7 +89,7 @@ logoLanding: {
 },
 link:{
     marginTop: '1rem',
-}
+},
 
 
 }));

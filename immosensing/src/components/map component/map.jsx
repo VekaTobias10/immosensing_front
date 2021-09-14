@@ -7,18 +7,20 @@ import { useStyles } from "./style.js";
 import BcnBarriosData from "./lat-long-barrios-bcn.json";
 import { useTranslation } from "react-i18next";
 
+
 function MapBcn() {
   const classes = useStyles();
   const [t] = useTranslation("global");
-  const Barcelona = [41.390205, 2.154007];
-  const HortaGuinardo = [41.41849, 2.1677];
-  const santsMontjuic = [41.37263,2.1546];
+  const barcelona = [41.390205, 2.154007];
+  const hortaGuinardo = [41.41849, 2.1677];
+  // const santsMontjuic = [41.37263,2.1546];
+
 
   return (
     <div>
       <MapContainer
         className={classes.map}
-        center={Barcelona}
+        center={barcelona}
         zoom={13}
         scrollWheelZoom={false}
       >
@@ -27,7 +29,7 @@ function MapBcn() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={HortaGuinardo} icon={
+        <Marker position={hortaGuinardo} icon={
             new Icon({
               iconUrl: markerIconPng,
               iconSize: [25, 41],
@@ -38,7 +40,7 @@ function MapBcn() {
             Horta Guinardó <br /> 11 {t("map.neighborhood")} 
           </Popup>
         </Marker>
-        <Marker position={santsMontjuic} icon={
+        {/* <Marker position={santsMontjuic} icon={
             new Icon({
               iconUrl: markerIconPng,
               iconSize: [25, 41],
@@ -59,7 +61,7 @@ function MapBcn() {
                 <li>Sants-Badal</li>
             </ul>
           </Popup>
-        </Marker>
+        </Marker> */}
       </MapContainer>
       {/* <button onClick={barcelonetaFilter}>Filtra</button> */}
     </div>

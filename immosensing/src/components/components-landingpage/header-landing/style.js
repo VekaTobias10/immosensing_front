@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) => ({
         // backgroundImage: `url(${headerPhoto})`,
         background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${headerPhoto})`,
         position: 'relative',
-        paddingBottom: '18rem',
+        paddingBottom: '14rem',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
@@ -137,12 +137,12 @@ export const useStyles = makeStyles((theme) => ({
     },
     cardBuscador: {
         width: '25%',
-        margin: '5rem auto -20rem',
+        margin: '2rem auto -17rem;',
         padding: '1rem',
         color:theme.palette.secondary.main,
         [theme.breakpoints.down('sm')]: {
             width: '80%',
-            margin: '5rem auto -18rem',
+            margin: '2rem auto -17rem',
         }
 
     },

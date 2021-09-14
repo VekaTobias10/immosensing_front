@@ -5,13 +5,16 @@ import TextField from "@material-ui/core/TextField";
 import { useStyles } from "./style.js";
 import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
-import imgLogin from "../../assets/img/login/pexels-login.jpg";
+// import imgLogin from "../../assets/img/login/pexels-login.jpg";
 import { useTranslation } from "react-i18next";
 import logoimmosensing from "../../assets/img/landingpage-img/logoimmosensing.png";
-// import { useHistory } from 'react-router-dom';
+import NavBar from "../../components/components-landingpage/navBar/index.jsx";
 
-function Login() {
-  // const { push } = useHistory()
+
+
+
+export default function Login() {
+ 
   const classes = useStyles();
   const [t] = useTranslation("global");
   const [checked, setChecked] = React.useState(false);
@@ -58,6 +61,7 @@ function Login() {
 
   return (
     <React.Fragment>
+      <NavBar className={classes.navBarLogin}></NavBar>
       <div className={classes.pageContainer}>
    
         <div className={classes.accountContainer}>
@@ -105,24 +109,16 @@ function Login() {
             <Button type="submit" className={classes.buttonlogin} variant="contained">
             {t("login.ingresa")}
             </Button>
-            {/* <Button className={classes.buttonlogin} variant="contained" onClick={() => push('/')} >LOGIN</Button> */}
+          
 
-            {/* <p className="link"><a className="link_color" href='#'>Forgot password?</a></p> */}
             <p className={classes.link}>
             {t("login.haveAccount")}
             <Link to="/register">{t("header.register")}</Link>
             </p>
           </form>
         </div>
-        <div>
-          <img
-            className={classes.imgRegister}
-            src={imgLogin}
-            alt="img-register"
-          ></img>
-        </div>
       </div>
     </React.Fragment>
   );
 }
-export default Login;
+
