@@ -28,9 +28,9 @@ let [barrios, updateBarrios] = useState([]);
       <ul className={classes.listCards}>
           {barrios
           .map((i)=>(
-            <li className={classes.listItem} key={i.id}>
+            <p className={classes.listItem} key={i.id}>
             <CardsInfoBcn barrios={i}></CardsInfoBcn>
-            </li>
+            </p>
           ))  
           }
       </ul>
@@ -43,5 +43,7 @@ let [barrios, updateBarrios] = useState([]);
     </div>
   );
 }
+
+// array de barrios solo debe generar 3 elementos aleatorios
 
 export default HomeUser;
