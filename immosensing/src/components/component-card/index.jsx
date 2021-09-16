@@ -11,23 +11,25 @@ function CardsInfoBcn(props) {
   // const [t] = useTranslation("global");
   return (
     <React.Fragment>
+      <div  className={classes.containerBarrios}>
       <div className={classes.root}>
       <Grid container direction="row" justifyContent="center" spacing={2}>
-        <Grid item xs={12} md={6} lg={3}>
-            {[0].map((value) => (
+            {props.barrios.neighborhood.map((v,i,a) => (
+                <Grid item xs={12} md={6} lg={3}>
                 <Card className={classes.card}>
                   <CardContent>
                   <Typography variant="body2" color="textSecondary">
-                  <h2>{props.barrios.neighborhood[1]?.nameBarrio}</h2>
+                  <h2>{props.barrios.neighborhood[i]?.nameBarrio}</h2>
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                  <p>{props.barrios.neighborhood[1]?.description_es}</p>
+                  <p>{props.barrios.neighborhood[i]?.description_es}</p>
                   </Typography>
                   </CardContent>
                 </Card>
+                </Grid>
             ))}
-        </Grid>
       </Grid>
+      </div>
       </div>
     </React.Fragment>
   );

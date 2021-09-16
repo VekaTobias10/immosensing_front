@@ -65,6 +65,12 @@
     },
     "map":{
        "neighborhood": "Barrios"
+    },
+    "multiselect":{
+        "comisarias": "Comisarias",
+        "atencionPrimaria": "Atención primaria",
+        "hoteles":"Hoteles",
+        "recreoDePerros": "Areas de recreo de perros"
     }
 
 }
