@@ -29,14 +29,14 @@ function MapBcn() {
   let [hoteles, updateHoteles] = useState([]);
 
   //Multiselect
-  const [servicios, setPersonName] = React.useState([]);
+  const [servicios, setServicios] = React.useState([]);
   const names = [
     "Comisarias",
     "Atención primaria",
   ];
 
   const handleChange = (event) => {
-    setPersonName(event.target.value);
+    setServicios(event.target.value);
   };
 
   useEffect(() => {
