@@ -15,32 +15,21 @@ export const useStyles = makeStyles((theme) => ({
     bigInputData: {
         width: "100%",
     },
-    personalDataBigcontainer:{
-        display: "flex",
+    personalRegisterContainer:{
         width: "100%",
         height:'100vh',
         [theme.breakpoints.down('sm')]: {
             width:"fit-content",
         }
     },
-
+    titleRegister:{
+        margin:'auto',
+        width:'100%'
+    },
     personalDataInputTitelcontainer:{
         width: "100%",
     },
-    inputOculto:{
-        border:"none",
-        color:"transparent",
-    },
-    imgBcn:{
-        width:'100%',
-        height:'100vh',
-        borderLeft:'8px solid',
-        borderColor: theme.palette.primary.main,
-        [theme.breakpoints.down('sm')]: {
-            display:"none",
-        }
-       
-    },
+
     checkboxContainer:{
         display: 'flex',
         margin: '1rem auto',
@@ -48,7 +37,7 @@ export const useStyles = makeStyles((theme) => ({
         alignItems:'center'
     },
     inputContainer:{
-        width: '65%',
+        width: '100%',
     },
     logoLanding: {
         width: '13%',
