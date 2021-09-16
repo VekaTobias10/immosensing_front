@@ -2,7 +2,6 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import { useStyles } from "./style.js";
 import Button from '@material-ui/core/Button';
-import imgBcnRegister from '../../assets/img/register/imgRegisterBcn.jpg';
 import logoimmosensing from "../../assets/img/landingpage-img/logoimmosensing.png";
 import { useTranslation } from "react-i18next";
 import Modal from '@material-ui/core/Modal';
@@ -99,15 +98,16 @@ export default function PersonalDataRegister() {
 
   
   return (
-    <div className={classes.personalDataBigcontainer}>
-     
-        <div className={classes.inputContainer}>
-        <img
+    <div className={classes.personalRegisterContainer}>
+     <div className={classes.titleRegister}>
+     <img
           src={logoimmosensing}
           className={classes.logoLanding}
           alt="logo-landing"
         ></img>
         <h1>{t("register.title")}</h1>
+     </div>
+        <div className={classes.inputContainer}>
           <form
             className={classes.root}
             onSubmit={handleSubmit}
@@ -190,9 +190,6 @@ export default function PersonalDataRegister() {
         {body}
       </Modal>
           </form>
-      </div>
-      <div className={classes.imgContainerPersonal}>
-        <img className={classes.imgBcn} src={imgBcnRegister} alt="logo-movimiento" />
       </div>
     </div>
   );
