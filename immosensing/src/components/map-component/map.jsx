@@ -30,10 +30,7 @@ function MapBcn() {
 
   //Multiselect
   const [servicios, setServicios] = React.useState([]);
-  const names = [
-    "Comisarias",
-    "Atención primaria",
-  ];
+  const names = ["Comisarias", "Atención primaria"];
 
   const handleChange = (event) => {
     setServicios(event.target.value);
@@ -79,7 +76,7 @@ function MapBcn() {
         );
       })
       .then((r) => r.json())
-      .then((h) => updateHoteles((hotels)=> hotels.concat(h.result.records)))
+      .then((h) => updateHoteles((hotels) => hotels.concat(h.result.records)))
       .catch((err) => err);
   }, []);
 
@@ -87,22 +84,28 @@ function MapBcn() {
     <div>
       {/* multiselect */}
       <FormControl className={classes.formControl}>
-        <InputLabel id="demo-mutiple-chip-label">Chip</InputLabel>
+        <InputLabel id="demo-mutiple-chip-label">Escoja el servicio</InputLabel>
         <Select
           labelId="demo-mutiple-chip-label"
           id="demo-mutiple-chip"
           multiple
           value={servicios}
+          name='seleccion'
           onChange={handleChange}
           input={<Input id="select-multiple-chip" />}
           renderValue={(selected) => (
             <div className={classes.chips}>
-              {selected.map((value) => (
-                <Chip key={value} label={value} className={classes.chip} />
-              ))}
+              {servicios.length > 0 ?
+              selected.map((value,i,p) => (
+                <Chip key={value} label={comisarias} className={classes.chip} />
+              ))
+              :
+              selected.map((value,i,p) => (
+                <Chip key={value} label={atencionPrimaria} className={classes.chip} />
+              ))
+             }
             </div>
           )}
-          // MenuProps={MenuProps}
         >
           {names.map((name) => (
             <MenuItem key={name} value={name}>
@@ -123,7 +126,9 @@ function MapBcn() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {comisarias.map((c, i) => (
+
+
+       {comisarias.map((c, i) => (
           <Marker
             key={i}
             position={[c.geo_epgs_4326_x, c.geo_epgs_4326_y]}
@@ -209,12 +214,9 @@ function MapBcn() {
 
 export default MapBcn;
 
-
-
 /**1- Cambiar el nombre a la variable del array de elementos seleccionados
 2- Si el array de seleccionados esta vacio, pintas todos tus arrays
 3- Si no, solo pintas los arrays de markers cuyo nombre se encuentra en al lista de seleccionados, es decir si selecciono solo "comisarias", el array de atencionPrimaria no se debería pintar
 
 Solo pinto comisarias si el array de seleccionados está vacio o si en el array de seleccionados existe "Comisarias"
 Solo pinto atencionPrimaria si el array de seleccionados está vacio o si en el array de seleccionados existe "Atención Primaria" */
-

@@ -14,7 +14,7 @@ map:{
 //Multiselect
 formControl: {
     margin: '1rem 2rem',
-    minWidth: 120,
+    minWidth: '30%',
     maxWidth: '80%',
     
   },
