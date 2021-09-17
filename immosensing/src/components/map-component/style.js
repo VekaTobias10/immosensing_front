@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme) => ({
 
 map:{
     height:'70vh',
-    width:'90%',
+    width:'70%',
     color:theme.palette.primary.main,
     margin:'auto',
 },
