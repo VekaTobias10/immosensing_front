@@ -26,7 +26,7 @@ function MapBcn() {
   let [atencionPrimaria, updateAtencionPrimaria] = useState([]);
   // let [consulados, updateConsulados] = useState([]);
   // let [aparcamientos, updateAparcamientos] = useState([]);
-  let [hoteles, updateHoteles] = useState([]);
+  // let [hoteles, updateHoteles] = useState([]);
 
   //Multiselect
   const [servicios, setServicios] = React.useState([]);
@@ -65,19 +65,19 @@ function MapBcn() {
     //   .then((p) => updateAparcamientos(p.result.records))
     //   .catch((err) => err);
 
-    fetch(
-      "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search?resource_id=9bccce1b-0b9d-4cc6-94a7-459cb99450de&fields=geo_epgs_4326_y,geo_epgs_4326_x,name"
-    )
-      .then((r) => r.json())
-      .then((p) => {
-        updateHoteles(p.result.records);
-        return fetch(
-          "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search?fields=geo_epgs_4326_y%2Cgeo_epgs_4326_x%2Cname&offset=100&resource_id=9bccce1b-0b9d-4cc6-94a7-459cb99450de"
-        );
-      })
-      .then((r) => r.json())
-      .then((h) => updateHoteles((hotels) => hotels.concat(h.result.records)))
-      .catch((err) => err);
+    // fetch(
+    //   "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search?resource_id=9bccce1b-0b9d-4cc6-94a7-459cb99450de&fields=geo_epgs_4326_y,geo_epgs_4326_x,name"
+    // )
+    //   .then((r) => r.json())
+    //   .then((p) => {
+    //     updateHoteles(p.result.records);
+    //     return fetch(
+    //       "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search?fields=geo_epgs_4326_y%2Cgeo_epgs_4326_x%2Cname&offset=100&resource_id=9bccce1b-0b9d-4cc6-94a7-459cb99450de"
+    //     );
+    //   })
+    //   .then((r) => r.json())
+    //   .then((h) => updateHoteles((hotels) => hotels.concat(h.result.records)))
+    //   .catch((err) => err);
   }, []);
 
   return (
@@ -95,15 +95,9 @@ function MapBcn() {
           input={<Input id="select-multiple-chip" />}
           renderValue={(selected) => (
             <div className={classes.chips}>
-              {servicios.length > 0 ?
-              selected.map((value,i,p) => (
-                <Chip key={value} label={comisarias} className={classes.chip} />
-              ))
-              :
-              selected.map((value,i,p) => (
-                <Chip key={value} label={atencionPrimaria} className={classes.chip} />
-              ))
-             }
+              {selected.map((value) => (
+                <Chip key={value} label={value} className={classes.chip} />
+              ))}
             </div>
           )}
         >
@@ -128,7 +122,7 @@ function MapBcn() {
         />
 
 
-       {comisarias.map((c, i) => (
+       {servicios.length === 0 || servicios.some(s=> s === 'Comisarias') ? comisarias.map((c, i) => (
           <Marker
             key={i}
             position={[c.geo_epgs_4326_x, c.geo_epgs_4326_y]}
@@ -142,9 +136,9 @@ function MapBcn() {
           >
             <Popup>{c.name}</Popup>
           </Marker>
-        ))}
+        )): ''}
 
-        {atencionPrimaria.map((a, i) => (
+        {servicios.length === 0 || servicios.some(s=> s === 'Atención primaria') ? atencionPrimaria.map((a, i) => (
           <Marker
             key={i}
             position={[a.geo_epgs_4326_x, a.geo_epgs_4326_y]}
@@ -158,7 +152,7 @@ function MapBcn() {
           >
             <Popup>{a.name}</Popup>
           </Marker>
-        ))}
+        )): ''}
 
         {/* {consulados.map((c, i) => (
           <Marker
@@ -192,7 +186,7 @@ function MapBcn() {
           </Marker>
         ))} */}
 
-        {hoteles.map((a, i) => (
+        {/* {hoteles.map((a, i) => (
           <Marker
             key={i}
             position={[a.geo_epgs_4326_x, a.geo_epgs_4326_y]}
@@ -206,7 +200,7 @@ function MapBcn() {
           >
             <Popup>{a.name}</Popup>
           </Marker>
-        ))}
+        ))} */}
       </MapContainer>
     </div>
   );
