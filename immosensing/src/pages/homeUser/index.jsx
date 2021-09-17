@@ -28,9 +28,9 @@ let [barrios, updateBarrios] = useState([]);
       <ul className={classes.listCards}>
           {barrios
           .map((i)=>(
-            <p className={classes.listItem} key={i.id}>
+            <li className={classes.listItem} key={i.id}>
             <CardsInfoBcn barrios={i}></CardsInfoBcn>
-            </p>
+            </li>
           ))  
           }
       </ul>
