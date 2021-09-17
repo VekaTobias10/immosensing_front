@@ -24,6 +24,7 @@ function CardsInfoBcn(props) {
                   <Typography variant="body2" color="textSecondary">
                   <p>{props.barrios.neighborhood[i]?.description_es}</p>
                   </Typography>
+                  
                   </CardContent>
                 </Card>
                 </Grid>
