@@ -46,7 +46,11 @@ export const useStyles = makeStyles((theme) => ({
 
     },
     btnAccessDeco: {
-        textDecoration: 'none'
+        '&:hover, &:focus, &:visited, &:link, &:active': {
+            textDecoration: 'none',
+            outline: 'none',
+            color: theme.palette.primary.main,
+        },
     },
     btnAccess: {
         backgroundColor: theme.palette.primary.main,

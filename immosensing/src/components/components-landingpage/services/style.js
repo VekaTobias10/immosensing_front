@@ -45,12 +45,12 @@ export const useStyles = makeStyles((theme) => ({
         padding: '1.5rem',
         boxShadow: ' 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
         [theme.breakpoints.down('sm')]: {
-            maxWidth: '100%',
+            maxWidth: '80%',
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
             margin:'1rem auto',
-            padding:'1rem'
+            padding:'1.5rem'
         },
     },
     iconServices: {

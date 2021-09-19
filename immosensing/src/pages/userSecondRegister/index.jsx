@@ -7,16 +7,11 @@ import Button from "@material-ui/core/Button";
 import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import { useHistory } from "react-router-dom";
-// import {React, useContext} from 'react';
-// import { ThemeContext } from '../../../assets/themes/theme-context';
-import logoimmosensing from "../../assets/img/landingpage-img/logoimmosensing.png";
 import { useTranslation } from "react-i18next";
 import { useSession } from "../../hooks/customHook";
 
 export default function UserSecondRegister() {
   const classes = useStyles();
-  // const Theme = useContext(ThemeContext);
-  // const [modo, setTema ] = Theme;
   const [t] = useTranslation("global");
   const [zone, setZone] = React.useState("");
   const [alquiler, setAlquiler] = React.useState("");
@@ -73,14 +68,6 @@ export default function UserSecondRegister() {
 
   return (
     <React.Fragment>
-      <div className={classes.mainNavBar}>
-        <div className={classes.containerNavBar}>
-          <img
-            src={logoimmosensing}
-            className={classes.logoLanding}
-            alt="logo-landing"
-          ></img>
-        </div>
         <div className={classes.welcomeHeader}>
           <h1 className={classes.subtitleHeader}>
             {t("secondRegister.title")}
@@ -221,7 +208,6 @@ export default function UserSecondRegister() {
             </Button>
           </form>
         </Grid>
-      </div>
     </React.Fragment>
   );
 }

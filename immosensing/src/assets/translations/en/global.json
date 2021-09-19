@@ -3,12 +3,19 @@
         "who_are_we": "Who are we?",
         "what_do_we": "¿What do we?",
         "patrocinador": "Sponsors",
-        "acceso": "Log-In"
+        "acceso": "Log-In",
+        "logOut": "Log-Out",
+        "home": "Home"
     },
     "header": {
-        "welcome": "Welcome to Immosensing",
+        "welcome": "Immosensing",
         "subtitle-header": "Redefining Real Estate from Space",
-        "register": "Sign Up!"
+        "register": "Sign Up!",
+        "registro-nav": "Register"
+    },
+    "whoarewe":{
+        "title": "Our Mision",
+        "text-msg": "We know that buying a home is the biggest investment of your life, and nowadays, we seem to have much more information about our daily digital purchases than about where we are going to spend our lives. Immosensing's goal is to provide the best location and offers based on your preferences when looking for a place to live."
     },
     "cardService": {
         "serviceOne": "Insert your preferences and we will find the best location for you based on Earth Observation data and our AI algorithms.",
@@ -58,6 +65,10 @@
     },
     "map":{
        "neighborhood": "Neighborhood"
+    },
+
+    "page":{
+        "logOut": "You're logged out"
     }
 
     

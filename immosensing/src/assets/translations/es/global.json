@@ -3,13 +3,15 @@
         "who_are_we": "SERVICIOS",
         "what_do_we": "MISIÓN",
         "patrocinador": "RECONOCIMIENTO",
-        "acceso": "ACCESO",
-        "logOut": "SALIR"
+        "acceso": "Acceso",
+        "logOut": "SALIR",
+        "home": "Inicio"
     },
     "header": {
-        "welcome": "Bienvenido a Immosensing",
+        "welcome": "Immosensing",
         "subtitle-header": "Redefiniendo la propiedad inmobiliaria desde el espacio",
-        "register": "Registrate!"
+        "register": "Registrate!",
+        "registro-nav": "Registro"
     },
     "whoarewe":{
         "title": "Nuestra Misión",
@@ -71,6 +73,9 @@
         "atencionPrimaria": "Atención primaria",
         "hoteles":"Hoteles",
         "recreoDePerros": "Areas de recreo de perros"
+    },
+    "page":{
+        "logOut": "Se ha cerrado la sesión"
     }
 
 }
