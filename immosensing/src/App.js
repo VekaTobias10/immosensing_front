@@ -9,28 +9,32 @@ import UserSecondRegister from './pages/userSecondRegister/index';
 import PrivateRoute from './components/privateRoute/index';
 import Dashboard from './pages/dashboard/dashboard';
 import HomeUser from './pages/homeUser/index';
-
-
+import LogOutPage from './pages/log-out-page/index';
+import CardsDetailsBarrios from './components/card-details-neig/index';
 
 function App() {
- 
+
 
 
   return (
     <React.Fragment>
-    <ScopedCssBaseline>
-      <Router>
-       
+      <ScopedCssBaseline>
+        <Router>
+
           <Switch>
-          <PrivateRoute path='/dashboard'>
-          <Dashboard />
-        </PrivateRoute>
-          <PrivateRoute path='/homeUser'>
-          <HomeUser />
-        </PrivateRoute>
-          <PrivateRoute path='/secondRegister'>
-          <UserSecondRegister />
-        </PrivateRoute>
+            <PrivateRoute path='/mapBcn'>
+              <Dashboard />
+            </PrivateRoute>
+            <PrivateRoute path='/homeUser'>
+              <HomeUser />
+            </PrivateRoute>
+            <PrivateRoute path='/secondRegister'>
+              <UserSecondRegister />
+            </PrivateRoute>
+            <Route path="/preferences/barrios/:name" children={<CardsDetailsBarrios></CardsDetailsBarrios>} />
+            <Route path="/logOut">
+              <LogOutPage></LogOutPage>
+            </Route>
             <Route path="/register">
               <PersonalDataRegister></PersonalDataRegister>
             </Route>
@@ -44,7 +48,7 @@ function App() {
               <LandingPage></LandingPage>
             </Route>
           </Switch>
-      </Router>
+        </Router>
       </ScopedCssBaseline>
     </React.Fragment>
   );

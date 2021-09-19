@@ -55,7 +55,10 @@ export const useStyles = makeStyles((theme) => ({
     buttonRegister: {
         color: theme.palette.primary.main,
         fontSize: '1.2rem',
-        textDecoration:'none'
+        textDecoration:'none',
+        minWidth:'20%',
+        margin:'0.5rem',
+        borderColor:theme.palette.primary.main
     },
     linkColor:{
         '&:hover, &:focus, &:visited, &:link, &:active': {

@@ -6,7 +6,7 @@ import logoimmosensing from "../../assets/img/landingpage-img/logoimmosensing.pn
 import { useTranslation } from "react-i18next";
 import Modal from '@material-ui/core/Modal';
 import { useHistory } from "react-router-dom";
-
+import NavBar from '../../components/components-landingpage/navBar/index';
 
 
 //------------Modal---------------------//
@@ -99,6 +99,7 @@ export default function PersonalDataRegister() {
   
   return (
     <div className={classes.personalRegisterContainer}>
+      <NavBar></NavBar>
      <div className={classes.titleRegister}>
      <img
           src={logoimmosensing}
@@ -139,7 +140,7 @@ export default function PersonalDataRegister() {
             }}
             />
             <TextField
-              className={classes.inputData}
+              className={classes.bigInputData}
               required
               type="email"
               name="email"
@@ -165,7 +166,7 @@ export default function PersonalDataRegister() {
             }}
             />
             <TextField
-              className={classes.bigInputData}
+              className={classes.inputData}
               required
               type="password"
               name="repeated_pass"

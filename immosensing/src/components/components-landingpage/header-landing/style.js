@@ -119,16 +119,22 @@ export const useStyles = makeStyles((theme) => ({
     buttonRegister: {
         color: theme.palette.primary.main,
         fontSize: '1.2rem',
+        borderColor:theme.palette.primary.main
 
     },
     btnAccessDeco: {
-        textDecoration: 'none'
+        '&:hover, &:focus, &:visited, &:link, &:active': {
+            textDecoration: 'none',
+            outline: 'none',
+            color: theme.palette.primary.main,
+        },
     },
     btnAccess: {
         color: theme.palette.primary.main,
         width: '8rem',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        borderColor:theme.palette.primary.main
     },
     searchContainer: {
         width: '100%',

@@ -9,7 +9,6 @@ import IconButton from "@material-ui/core/IconButton";
 import Switch from "@material-ui/core/Switch";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../../assets/themes/theme-wrapper-page";
-import { useAuth } from "../../../hooks/customHook";
 
 export default function NavBar() {
   const classes = useStyles();
@@ -50,22 +49,23 @@ export default function NavBar() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
+             <MenuItem onClick={handleClose}>
+             <Link className={classes.btnAccessDeco} to="/">
+                {t("navbar.home")}
+              </Link>
+             </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link className={classes.btnAccessDeco} to="/register">
+                {t("header.registro-nav")}
+              </Link>
+            </MenuItem>
             <MenuItem onClick={handleClose}>
               {" "}
-              {useAuth ? (
-                <Link className={classes.btnAccessDeco} to="/logOut">
-                  {" "}
-                  {t("navbar.logOut")}
-                </Link>
-              ) : (
-                <Link className={classes.btnAccessDeco} to="/login">
-                  {" "}
-                  {t("navbar.acceso")}
-                </Link>
-              )}
+              <Link className={classes.btnAccessDeco} to="/login">
+                {t("navbar.acceso")}
+              </Link>
             </MenuItem>
+           
           </Menu>
           <Button
             variant="outlined"

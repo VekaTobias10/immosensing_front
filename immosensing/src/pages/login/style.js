@@ -17,10 +17,10 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    margin:'auto',
+    margin: 'auto',
     [theme.breakpoints.down('sm')]: {
       padding: 0,
-      margin:0
+      margin: 0
     }
   },
   // singupContainer: {
@@ -51,6 +51,7 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     width: '40%',
     margin: 'auto',
+    height: '100vh',
     [theme.breakpoints.down('sm')]: {
       width: "90%",
     }
@@ -67,29 +68,37 @@ export const useStyles = makeStyles((theme) => ({
     }
   },
 
-imgRegister:{
-    minWidth:'100%',
+  imgRegister: {
+    minWidth: '100%',
     height: '100vh',
     borderLeft: '8px solid #0FCDB2',
     [theme.breakpoints.down('sm')]: {
       display: "none",
     }
 
-},
-checkBox:{
+  },
+  checkBox: {
     display: 'flex',
     alignItems: 'center',
-},
-logoLanding: {
+  },
+  logoLanding: {
     width: '13%',
-    margin:'0 auto 1rem',
+    margin: '0 auto 1rem',
     [theme.breakpoints.down('sm')]: {
       width: "50%",
     }
-},
-link:{
+  },
+  link: {
     marginTop: '1rem',
-},
+  },
+  colorLink: {
+    color: theme.palette.primary.main,
+    '&:hover, &:focus, &:visited, &:link, &:active': {
+      textDecoration: 'none',
+      outline: 'none',
+      color: theme.palette.primary.main,
+    },
+  },
 
 
 }));

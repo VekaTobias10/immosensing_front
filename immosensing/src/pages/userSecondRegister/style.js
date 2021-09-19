@@ -62,9 +62,9 @@ export const useStyles = makeStyles((theme) => ({
 
     welcomeHeader: {
         width: '60%',
-        margin: '1rem auto 1rem',
+        margin: 'auto',
         color: 'black',
-        padding: '1rem',
+        padding: '3.5rem',
         textAlign: 'center',
     },
 

@@ -8,11 +8,12 @@ export const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         padding: theme.spacing(2),
+        width:'70%'
 
     },
-    card:{
-        minHeight:'80px'
-    }
+    accordionTitle:{
+        borderColor:theme.palette.primary.main
+    },
 
 
 

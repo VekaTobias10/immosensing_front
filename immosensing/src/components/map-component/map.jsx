@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
-// import hospitalIconMarker from '../../assets/img/icon-marker/hospital-marker.png';
-// import consuladoIconMarker from '../../assets/img/icon-marker/consulado-marker.png';
+import hospitalIconMarker from '../../assets/img/icon-marker/hospital-marker.png';
+import consuladoIconMarker from '../../assets/img/icon-marker/consulado-marker.png';
+import parkingIconMarker from '../../assets/img/icon-marker/parking-marker.png';
+import policeIconMarker from '../../assets/img/icon-marker/police-marker.png';
 import { Icon } from "leaflet";
 import { useStyles } from "./style.js";
 import BcnBarriosData from "./lat-long-barrios-bcn.json";
@@ -166,7 +168,7 @@ function MapBcn() {
       <MapContainer
         className={classes.map}
         center={barcelona}
-        zoom={12}
+        zoom={14}
         scrollWheelZoom={false}
       >
         <GeoJSON key={BcnBarriosData} data={BcnBarriosData}></GeoJSON>
@@ -182,7 +184,7 @@ function MapBcn() {
                 position={[c.geo_epgs_4326_x, c.geo_epgs_4326_y]}
                 icon={
                   new Icon({
-                    iconUrl: markerIconPng,
+                    iconUrl: policeIconMarker,
                     iconSize: [25, 41],
                     iconAnchor: [12, 41],
                   })
@@ -201,7 +203,7 @@ function MapBcn() {
                 position={[a.geo_epgs_4326_x, a.geo_epgs_4326_y]}
                 icon={
                   new Icon({
-                    iconUrl: markerIconPng,
+                    iconUrl: hospitalIconMarker,
                     iconSize: [25, 41],
                     iconAnchor: [12, 41],
                   })
@@ -219,7 +221,7 @@ function MapBcn() {
                 position={[c.geo_epgs_4326_x, c.geo_epgs_4326_y]}
                 icon={
                   new Icon({
-                    iconUrl: markerIconPng,
+                    iconUrl: consuladoIconMarker,
                     iconSize: [25, 41],
                     iconAnchor: [12, 41],
                   })
@@ -237,7 +239,7 @@ function MapBcn() {
                 position={[a.geo_epgs_4326_x, a.geo_epgs_4326_y]}
                 icon={
                   new Icon({
-                    iconUrl: markerIconPng,
+                    iconUrl: parkingIconMarker,
                     iconSize: [25, 41],
                     iconAnchor: [12, 41],
                   })

@@ -30,7 +30,7 @@ export default function ValidationSuccess() {
 </div>
 <div className={classes.buttonRegisterContainer}>
   <Button variant="outlined" className={classes.buttonRegister}>
-  <Link to="/login">{t("navbar.acceso")}</Link>
+  <Link className={classes.linkColor} to="/login">{t("navbar.acceso")}</Link>
   </Button>
 </div>
 </div>

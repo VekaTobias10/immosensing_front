@@ -113,7 +113,7 @@ export default function Login() {
 
             <p className={classes.link}>
             {t("login.haveAccount")}
-            <Link to="/register">{t("header.register")}</Link>
+            <Link className={classes.colorLink} to="/register">{t("header.register")}</Link>
             </p>
           </form>
         </div>

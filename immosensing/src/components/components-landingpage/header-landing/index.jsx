@@ -6,10 +6,13 @@ import { Search } from "@material-ui/icons";
 import { useTranslation } from "react-i18next";
 import logoimmosensing from "../../../assets/img/landingpage-img/logoimmosensing.png";
 import NavBar from '../navBar/index';
+// import { useAuth,removeToken } from "../../../hooks/customHook";
 import { useAuth } from "../../../hooks/customHook";
 
 export default function HeaderLanding() {
   const classes = useStyles();
+  const isAuth = useAuth();
+  // const isNotAuth = removeToken();
   const [t] = useTranslation("global");
   
  
@@ -35,14 +38,12 @@ export default function HeaderLanding() {
         </ul>
         <div>
           <Button className={classes.btnAccess} variant="outlined">
-            {useAuth ? (
+            {isAuth ? (
               <Link className={classes.btnAccessDeco} to="/logOut">
-                {" "}
                 {t("navbar.logOut")}
               </Link>
             ) : (
               <Link className={classes.btnAccessDeco} to="/login">
-                {" "}
                 {t("navbar.acceso")}
               </Link>
             )}
