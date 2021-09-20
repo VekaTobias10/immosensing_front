@@ -21,16 +21,9 @@ export const useStyles = makeStyles((theme) => ({
     button_lang: {
         color: 'white',
         margin: '0.3rem',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
-        }
     },
     button_lang2: {
         margin: '0.3rem',
-
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
-        }
     },
     containerButton: {
         position: 'absolute',

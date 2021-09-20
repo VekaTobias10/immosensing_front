@@ -5,7 +5,8 @@
         "patrocinador": "Sponsors",
         "acceso": "Log-In",
         "logOut": "Log-Out",
-        "home": "Home"
+        "home": "Home",
+        "homeUser":"User"
     },
     "header": {
         "welcome": "Immosensing",

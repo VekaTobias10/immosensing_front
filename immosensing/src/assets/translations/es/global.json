@@ -5,7 +5,9 @@
         "patrocinador": "RECONOCIMIENTO",
         "acceso": "Acceso",
         "logOut": "SALIR",
-        "home": "Inicio"
+        "home": "Inicio",
+        "homeUser":"Usuario",
+        "mapBcn":"Sitios de Interés"
     },
     "header": {
         "welcome": "Immosensing",
@@ -48,7 +50,8 @@
         "password":"Contraseña",
         "repeatPassword": "Repite la contraseña",
         "btnSubmit": "Continúa tu registro",
-        "wrongPass": "Las contraseñas no coinciden"
+        "wrongPass": "Las contraseñas no coinciden",
+        "modalTitle":"Verifica tu email para acceder"
     },
     "secondRegister":{
         "title": "Completa tu registro:",
@@ -76,6 +79,12 @@
     },
     "page":{
         "logOut": "Se ha cerrado la sesión"
-    }
+    },
+   "cardBarrios":{
+     "text":"Pertenece al districto ",
+     "pertenece":"Aquí puedes encontrar las viviendas que corresponden a "
+   }
+  
+
 
 }

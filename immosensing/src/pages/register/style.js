@@ -4,28 +4,23 @@ export const useStyles = makeStyles((theme) => ({
     root: {
         width: '70%',
         margin: '0.5rem auto',
+        marginTop: theme.spacing(3),
         [theme.breakpoints.down('sm')]: {
             width: "90%",
         }
     },
     inputData: {
-        width: '47%',
-        margin: theme.spacing(1),
+        width: '100%',
         [theme.breakpoints.down('sm')]: {
             width: "100%",
-            marginBottom: '0.2rem',
-            marginTop: '0.2rem',
             marginLeft: 0,
             marginRight: 0,
         }
     },
     bigInputData: {
-        width: '96%',
-        margin: theme.spacing(1),
+        width: '100%',
         [theme.breakpoints.down('sm')]: {
             width: "100%",
-            marginBottom: '0.2rem',
-            marginTop: '0.2rem',
             marginLeft: 0,
             marginRight: 0,
         }
@@ -39,7 +34,7 @@ export const useStyles = makeStyles((theme) => ({
         }
     },
     titleRegister: {
-        margin: 'auto',
+        margin: '1rem auto',
         width: '80%',
         textAlign: 'center',
         '&:hover, &:focus, &:visited, &:link, &:active': {
@@ -58,7 +53,8 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: 'center'
     },
     inputContainer: {
-        width: '100%',
+        width: '65%',
+        margin:'auto',
     },
     logoLanding: {
         width: '13%',
@@ -75,23 +71,26 @@ export const useStyles = makeStyles((theme) => ({
         background: theme.palette.primary.main,
         color: theme.palette.secondary.main,
         textAlign: 'center',
-        margin: theme.spacing(1),
+        margin: '1rem auto',
+        width:'50%',
         [theme.breakpoints.down('md')]: {
-            width: "100%",
-            margin: 0
+            width: "80%",
+            margin: "1rem auto"
         }
     },
 
     //modal
-    paper: {
-        position: 'absolute',
-        width: 400,
-        textAlign: 'center',
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      paper: {
         backgroundColor: theme.palette.background.paper,
-        border: '2px solid',
-        borderColor: theme.palette.primary.main,
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
-    },
+        borderColor: theme.palette.primary.main,
+        border:'solid 8px',
+      }
 
 }));

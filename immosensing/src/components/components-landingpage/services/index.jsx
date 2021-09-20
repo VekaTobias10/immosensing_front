@@ -11,7 +11,7 @@ export default function ServicesLanding() {
   const [t] = useTranslation("global");
 
   return (
-    <div className={classes.mainContainerServices}>
+    <div className={classes.mainContainerServices} id={'ServicesLanding'}>
       <div className={classes.servicesContainer}>
         <div className={classes.internalContainerServices}>
           <h1 className={classes.titleService}>{t("cardService.title")}</h1>
