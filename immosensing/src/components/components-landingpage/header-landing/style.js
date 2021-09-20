@@ -62,6 +62,13 @@ export const useStyles = makeStyles((theme) => ({
     listItem: {
         margin: '1rem'
     },
+    colorLinkNav:{
+        '&:hover, &:focus, &:visited, &:link, &:active': {
+            textDecoration: 'none',
+            outline: 'none',
+            color: theme.palette.primary.main,
+        },
+    },
     button_lang: {
         color: 'white',
         margin: '0.3rem',
@@ -157,4 +164,8 @@ export const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.primary.main,
         padding: '1rem',
     },
+    itemLink:{
+        textDecoration:'none',
+        color:theme.palette.primary.main
+    }
 }));

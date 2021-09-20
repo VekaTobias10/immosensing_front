@@ -5,6 +5,7 @@ export const useStyles = makeStyles((theme) => ({
 
     mainCont:{
         padding: '5rem 4rem',
+        height:'100vh',
         [theme.breakpoints.down('sm')]: {
             padding: '2rem 2rem',
         },

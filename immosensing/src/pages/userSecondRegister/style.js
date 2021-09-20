@@ -1,22 +1,32 @@
 import { makeStyles } from '@material-ui/core/styles';
-// import headerPhoto from '../../assets/img/landingpage-img/pexels-bcn.jpg';
+import headerPhoto from '../../assets/img/landingpage-img/pexels-bcn.jpg';
 
 
 export const useStyles = makeStyles((theme) => ({
     //navbar
     mainNavBar: {
         // backgroundImage: `url(${headerPhoto})`,
-        // background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${headerPhoto})`,
+        background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${headerPhoto})`,
         position: 'relative',
-        paddingBottom: '18rem',
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
+        backgroundRepeat:'no-repeat',
         backgroundPosition: 'center center',
         left: '0',
         top: '0',
         width: '100%',
         height: '100vh',
     },
+    containerPaper:{
+        width:'50%',
+        margin:'0 auto 0',
+        paddingTop: '2rem',
+        height:'100vh',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            height:'100vh'
+        }
+    },
+
     containerNavBar: {
         display: 'flex',
         flexDirection: 'row',
@@ -30,25 +40,25 @@ export const useStyles = makeStyles((theme) => ({
         margin: 'auto',
     },
     formContainer:{
-        margin: 'auto',
+        margin: '8px auto',
         textAlign: 'center',
-        width: '60%',
+        width: '90%',
         '& .MuiTextField-root': {
-            margin: theme.spacing(1),
+            marginTop:theme.spacing(1),
             width: '100%',
             [theme.breakpoints.down('sm')]: {
                 width: '100%',
-                margin: '10px auto',
             }
         },
         '& .MuiSelect-root': {
-            margin: theme.spacing(1),
+            marginTop:theme.spacing(1),
             width: '100%',
         }
     },
     formControl:{
-        margin: theme.spacing(1),
-        minWidth: '100%',
+        margin: '8px auto',
+        width: '100%',
+
     },
 
     logoLanding: {
@@ -63,9 +73,15 @@ export const useStyles = makeStyles((theme) => ({
     welcomeHeader: {
         width: '60%',
         margin: 'auto',
-        color: 'black',
-        padding: '3.5rem',
+        padding: '2rem',
         textAlign: 'center',
+        borderColor: theme.palette.primary.main,
+        border:'solid 8px',
+        color: theme.palette.primary.main,
+        [theme.breakpoints.down('sm')]: {
+            width: '80%',
+            padding:'3rem'
+        }
     },
 
 
@@ -73,7 +89,13 @@ export const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.primary.main,
         color: 'white',
         fontSize: '1.2rem',
-        textDecoration:'none'
+        textDecoration:'none',
+        margin:'0.7rem',
+        width:'50%',
+        [theme.breakpoints.down('sm')]: {
+            width: '75%',
+            margin: '1.7rem',
+        }
     },
 
 }));

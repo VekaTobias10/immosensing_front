@@ -9,10 +9,13 @@ import IconButton from "@material-ui/core/IconButton";
 import Switch from "@material-ui/core/Switch";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../../assets/themes/theme-wrapper-page";
+import { useAuth} from "../../../hooks/customHook";
 
 export default function NavBar() {
   const classes = useStyles();
   const [t, i18n] = useTranslation("global");
+  const isAuth = useAuth();
+  // const isNotAuth = removeToken();
   const { isDark, changeTheme } = useContext(ThemeContext);
 
   const handleChangeTheme = () => {
@@ -49,23 +52,46 @@ export default function NavBar() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-             <MenuItem onClick={handleClose}>
-             <Link className={classes.btnAccessDeco} to="/">
+            <MenuItem onClick={handleClose}>
+              <Link className={classes.btnAccessDeco} to="/">
                 {t("navbar.home")}
               </Link>
-             </MenuItem>
-            <MenuItem onClick={handleClose}>
-              <Link className={classes.btnAccessDeco} to="/register">
-                {t("header.registro-nav")}
-              </Link>
             </MenuItem>
-            <MenuItem onClick={handleClose}>
-              {" "}
-              <Link className={classes.btnAccessDeco} to="/login">
-                {t("navbar.acceso")}
-              </Link>
-            </MenuItem>
-           
+
+            {!isAuth ? (
+              <React.Fragment>
+                <MenuItem onClick={handleClose}>
+                  <Link className={classes.btnAccessDeco} to="/register">
+                    {t("header.registro-nav")}
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  {" "}
+                  <Link className={classes.btnAccessDeco} to="/login">
+                    {t("navbar.acceso")}
+                  </Link>
+                </MenuItem>
+              </React.Fragment>
+            ) : (
+              ""
+            )}
+
+            {isAuth ? (
+              <React.Fragment>
+                <MenuItem variant="outlined">
+                  <Link className={classes.btnAccessDeco} to="/homeUser">
+                    {t("navbar.homeUser")}
+                  </Link>
+                </MenuItem>
+                <MenuItem variant="outlined">
+                  <Link className={classes.btnAccessDeco} to="/mapBcn">
+                    {t("navbar.mapBcn")}
+                  </Link>
+                </MenuItem>
+              </React.Fragment>
+            ) : (
+              ""
+            )}
           </Menu>
           <Button
             variant="outlined"
@@ -86,6 +112,15 @@ export default function NavBar() {
             onChange={handleChangeTheme}
             color="secondary"
           />
+            {/* <Button
+              className={classes.btnAccess}
+              variant="outlined"
+              onClick={isNotAuth}
+            >
+              <Link className={classes.btnAccessDeco} to="/logOut">
+                {t("navbar.logOut")}
+              </Link>
+            </Button> */}
         </Toolbar>
       </AppBar>
     </React.Fragment>

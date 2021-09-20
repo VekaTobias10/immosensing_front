@@ -7,7 +7,10 @@ export const useStyles = makeStyles((theme) => ({
     listCards:{
         listStyleType:'none',
         width:'100%'
-    }
+    },
+    titlePageMap:{
+        textAlign:'center'
+    },
 
 
 

@@ -7,6 +7,7 @@ export const useStyles = makeStyles((theme) => ({
         padding: '2rem 1rem',
         display: 'flex',
         flexDirection:'column',
+        height:'100vh'
     },
     mainContainerWho: {
         width: '80%', 
@@ -20,7 +21,7 @@ export const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
     },
     supportTitle:{
-        
+        marginBottom: theme.spacing(4),
     },
     containerText:{
         display:'flex',
@@ -46,7 +47,7 @@ export const useStyles = makeStyles((theme) => ({
         },
     },
     header: {
-        display: 'flex',
+        display: 'none',
         alignItems: 'center',
         height: 50,
         paddingLeft: theme.spacing(4),

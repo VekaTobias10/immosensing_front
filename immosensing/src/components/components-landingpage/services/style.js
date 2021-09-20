@@ -6,6 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     mainContainerServices: {
         backgroundColor: theme.palette.primary.main,
         padding: '1rem',
+        height:'100vh',
     },
     servicesContainer: {
 

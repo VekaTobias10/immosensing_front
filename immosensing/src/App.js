@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline';
 import LandingPage from './pages/landing-page';
 import Login from './pages/login/login';
 import PersonalDataRegister from './pages/register/register';
@@ -12,13 +11,14 @@ import HomeUser from './pages/homeUser/index';
 import LogOutPage from './pages/log-out-page/index';
 import CardsDetailsBarrios from './components/card-details-neig/index';
 
+
+
 function App() {
 
 
 
   return (
     <React.Fragment>
-      <ScopedCssBaseline>
         <Router>
 
           <Switch>
@@ -49,7 +49,6 @@ function App() {
             </Route>
           </Switch>
         </Router>
-      </ScopedCssBaseline>
     </React.Fragment>
   );
 }

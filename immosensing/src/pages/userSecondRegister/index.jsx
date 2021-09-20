@@ -1,6 +1,7 @@
 import React from "react";
 import { useStyles } from "./style.js";
 import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
 import Button from "@material-ui/core/Button";
@@ -68,6 +69,8 @@ export default function UserSecondRegister() {
 
   return (
     <React.Fragment>
+      <div className={classes.mainNavBar}>
+      <Paper elevation={3} className={classes.containerPaper}>
         <div className={classes.welcomeHeader}>
           <h1 className={classes.subtitleHeader}>
             {t("secondRegister.title")}
@@ -208,6 +211,8 @@ export default function UserSecondRegister() {
             </Button>
           </form>
         </Grid>
+        </Paper>
+        </div>
     </React.Fragment>
   );
 }

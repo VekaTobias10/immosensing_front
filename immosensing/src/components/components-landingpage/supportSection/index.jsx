@@ -29,7 +29,7 @@ const tutorialSteps = [
 
 
 
-function SwipeableTextMobileStepper() {
+function SupportSection() {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -50,7 +50,7 @@ function SwipeableTextMobileStepper() {
   const [t] = useTranslation("global");
 
   return (
-    <div className={classes.mainCont}>
+    <div className={classes.mainCont} id={'SupportSection'}>
     <div className={classes.mainContainerWho}>
     <div className={classes.titlePresentation}>
     <h1 className={classes.supportTitle}>{t("sponsor.title")}</h1>
@@ -98,4 +98,4 @@ function SwipeableTextMobileStepper() {
   );
 }
 
-export default SwipeableTextMobileStepper;
+export default SupportSection;

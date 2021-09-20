@@ -11,10 +11,20 @@ function Dashboard() {
   let [district, updateDistricts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/infoBcn/districtBcn")
-      .then((r) => r.json())
-      .then((d) => updateDistricts(d))
-      .catch((err) => err);
+    // fetch("http://localhost:3001/infoBcn/districtBcn")
+    //   .then((r) => r.json())
+    //   .then((d) => updateDistricts(d))
+    //   .catch((err) => err);
+
+    async function fetchBcnDistrict() {
+      let apiDistrict = await fetch(
+        "http://localhost:3001/infoBcn/districtBcn"
+      );
+      apiDistrict = await apiDistrict.json();
+      updateDistricts(apiDistrict);
+    }
+      fetchBcnDistrict();
+
   }, []);
 
   return (
@@ -22,7 +32,8 @@ function Dashboard() {
       <NavBar></NavBar>
 
       <Grid container direction="row" spacing={2}>
-        <Grid item xs={12} md={6} lg={6}>
+        <Grid item xs={12} md={6} lg={12}>
+          <h1 className={classes.titlePageMap}>Estos son los puntos de interés de Barcelona</h1>
           <MapBcn></MapBcn>
         </Grid>
         <Grid item xs={12} md={6} lg={6}>
