@@ -20,11 +20,10 @@
         "text-msg": "Sabemos que la compra de una vivienda es la mayor inversión de tu vida, y hoy en día, parece que tenemos mucha más información sobre nuestras compras digitales diarias que sobre el lugar en el que vamos a pasar nuestra vida. El objetivo de Immosensing es ofrecer la mejor ubicación y ofertas en función de sus preferencias a la hora de buscar un lugar para vivir."
     },
     "cardService":{
-        "title": "Servicios",
+        "titleService": "Servicios",
         "serviceOne": "Introduzca sus preferencias y nosotros encontraremos la mejor ubicación para usted basándonos en los datos de observación de la Tierra y en nuestros algoritmos de IA",
         "serviceTwo": "Encontraremos una coincidencia entre sus preferencias y su vivienda ideal ya sea para alquilar, comprar o invertir",
         "serviceThree": "Los compradores e inversores encuentran una ubicación perfecta. Los agentes inmobiliarios encuentran una lista curada de la demanda."
-
     },
     "sponsor":{
         "title": "Con el apoyo de",
@@ -69,7 +68,8 @@
         
     },
     "map":{
-       "neighborhood": "Barrios"
+       "neighborhood": "Barrios",
+       "title":"Estos son los puntos de interés de Barcelona"
     },
     "multiselect":{
         "comisarias": "Comisarias",

@@ -11,21 +11,35 @@ import SearchIcon from '@material-ui/icons/Search';
 
 function CardsInfoBcn(props) {
   const classes = useStyles();
-  const [t] = useTranslation("global");
+  const [t,i18n] = useTranslation("global");
+
+
+
+
+  let txtName = ''; 
+  switch (i18n.options.lng) {
+    case "es":
+      txtName = props.barrios?.name;
+      break;
+    default:
+      txtName =  props.barrios?.name;
+  }
+
   return (
     <React.Fragment>
       <div className={classes.root}>
         <Grid container direction="row" spacing={2}>
           {/* {props.barrios.map((v,i,a) => ( */}
-          <Grid direction="row" item xs={12} md={6} lg={12}>
+          <Grid direction="row" item xs={12} md={12} lg={12}>
             <Card className={classes.card}>
               <CardContent>
                 <Typography color="textSecondary">
                   <Link
                     className={classes.linkBarrio}
-                    to={`preferences/barrios/${props.barrios?.name}`}
+                    to={`preferences/barrios/${txtName}`}
                   >
-                    <h2>{props.barrios?.name}</h2>
+                    <h2>{txtName}</h2>
+                    {/* props.barrios?.name */}
                   </Link>
                 </Typography>
                 <Typography color="textSecondary">
@@ -34,7 +48,7 @@ function CardsInfoBcn(props) {
                 <Typography color="textSecondary">
                   <p>
                     {t("cardBarrios.pertenece")} 
-                    "{props.barrios?.name}"
+                    "{txtName}"
                   </p>
                 </Typography>
                 <Button className={classes.btnFotocasaMU}>

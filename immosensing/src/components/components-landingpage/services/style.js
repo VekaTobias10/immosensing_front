@@ -6,7 +6,13 @@ export const useStyles = makeStyles((theme) => ({
     mainContainerServices: {
         backgroundColor: theme.palette.primary.main,
         padding: '1rem',
-        height:'100vh',
+        // height: '100vh',
+        [theme.breakpoints.down('sm')]: {
+            padding: '0.5rem',
+            // height: '100vh',
+        },
+
+
     },
     servicesContainer: {
 
@@ -16,7 +22,8 @@ export const useStyles = makeStyles((theme) => ({
         color: theme.palette.secondary.main,
         letterSpacing: '0.2rem',
         [theme.breakpoints.down('sm')]: {
-            width: '90%',
+            width: '100%',
+            margin: '2rem auto',
         }
 
     },
@@ -25,9 +32,10 @@ export const useStyles = makeStyles((theme) => ({
         width: '100%',
         flexDirection: 'column',
     },
-    titleService:{
+    titleService: {
         margin: '1rem auto 1rem',
-        color: theme.palette.secondary.main
+        color: theme.palette.secondary.main,
+        textAlign: 'center'
     },
     containersCard: {
         display: 'flex',
@@ -41,7 +49,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     root: {
         maxWidth: '27%',
-        borderRadius:'20px',
+        borderRadius: '20px',
         margin: '1.5rem',
         padding: '1.5rem',
         boxShadow: ' 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
@@ -50,9 +58,13 @@ export const useStyles = makeStyles((theme) => ({
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
-            margin:'1rem auto',
-            padding:'1.5rem'
+            margin: '1rem auto',
+            padding: '1.5rem'
         },
+        // [theme.breakpoints.down('md')]: {
+        //     width: '80%',
+        // },
+
     },
     iconServices: {
         fontSize: '80px',

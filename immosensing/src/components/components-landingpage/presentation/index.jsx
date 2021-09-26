@@ -54,10 +54,11 @@ function PresentationSection() {
   const [t] = useTranslation("global");
 
   return (
-    <div className={classes.mainCont} id={'PresentationSection'}>
-    <div className={classes.mainContainerWho}>
-    <div className={classes.titlePresentation}>
-    <h1 className={classes.misionTitle}>{t("whoarewe.title")}</h1>
+    <React.Fragment>
+    <div className={classes.mainContainerAll} id={'PresentationSection'}>
+    <div className={classes.mainCont} >
+    <div  className={classes.titlePresentation}>
+    <h1>{t("whoarewe.title")}</h1>
     </div>
     <div className={classes.containerText}>
     <div className={classes.root}>
@@ -104,6 +105,7 @@ function PresentationSection() {
     </div>
     </div>
     </div>
+    </React.Fragment>
   );
 }
 

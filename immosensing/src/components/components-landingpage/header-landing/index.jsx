@@ -2,18 +2,17 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { useStyles } from "./style.js";
 import { Button} from "@material-ui/core";
-// import { Button, Card, TextField } from "@material-ui/core";
+// import { Card, TextField } from "@material-ui/core";
 // import { Search } from "@material-ui/icons";
 import { useTranslation } from "react-i18next";
 import logoimmosensing from "../../../assets/img/landingpage-img/logoimmosensing.png";
 import NavBar from '../navBar/index';
-// import { useAuth,removeToken } from "../../../hooks/customHook";
 import { useAuth } from "../../../hooks/customHook";
 
 export default function HeaderLanding() {
   const classes = useStyles();
   const isAuth = useAuth();
-  // const isNotAuth =removeToken();
+  // const isNotAuth =useRemoveToken();
   const [t] = useTranslation("global");
   
  
@@ -60,6 +59,8 @@ export default function HeaderLanding() {
         <h4 className={classes.subtitleHeader}>
           {t("header.subtitle-header")}
         </h4>
+
+        
       </div>
       <div className={classes.buttonRegisterContainer}>
         <Button variant="outlined" className={classes.buttonRegister}>
@@ -68,6 +69,7 @@ export default function HeaderLanding() {
           </Link>
         </Button>
       </div>
+
       {/* <Card className={classes.cardBuscador}>
         <form className={classes.searchContainer} noValidate autoComplete="off">
           <TextField

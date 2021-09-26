@@ -14,6 +14,7 @@ export const useStyles = makeStyles((theme) => ({
         margin: '1rem auto 2rem',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
+            height:'100vw'
         },
     },
     titlePresentation:{
@@ -49,7 +50,6 @@ export const useStyles = makeStyles((theme) => ({
     header: {
         display: 'none',
         alignItems: 'center',
-        height: 50,
         paddingLeft: theme.spacing(4),
     },
     img: {

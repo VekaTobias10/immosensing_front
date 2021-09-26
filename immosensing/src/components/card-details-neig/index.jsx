@@ -6,14 +6,26 @@ import Grid from "@material-ui/core/Grid";
 // import CardContent from "@material-ui/core/CardContent";
 // import Typography from "@material-ui/core/Typography";
 import NavBar from "../components-landingpage/navBar/index";
+import { useTranslation } from "react-i18next";
 
 
 
 function CardsDetailsBarrios(props) {
   const classes = useStyles();
   let { name } = useParams();
-
   let [eachBarrio, updateEachBarrio] = useState([]);
+
+  //lenguaje
+  const [t, i18n] = useTranslation('global');
+  let txt = ''; 
+  switch (i18n.options.lng) {
+    case "es":
+      txt = eachBarrio?.description_es;      
+      break;
+    default:
+      txt = eachBarrio?.description_en;   
+  };
+
   const baseURL = "http://localhost:3001/static/img/";
 
   useEffect(() => {
@@ -37,7 +49,7 @@ function CardsDetailsBarrios(props) {
             ></img>
             <div className={classes.containerText}>
             <h2>{eachBarrio?.name}</h2>
-            <p className={classes.card}>{eachBarrio?.description_es}</p>
+            <p className={classes.card}>{txt}</p>
           
             {/* <Typography variant="body2" color="textSecondary">
                   <p>{props.barrios.neighborhood[i]?.description_es}</p>
