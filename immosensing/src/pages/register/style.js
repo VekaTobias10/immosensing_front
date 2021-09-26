@@ -55,6 +55,9 @@ export const useStyles = makeStyles((theme) => ({
     inputContainer: {
         width: '65%',
         margin:'auto',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
     },
     logoLanding: {
         width: '13%',

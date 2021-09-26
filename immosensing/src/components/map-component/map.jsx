@@ -138,6 +138,7 @@ function MapBcn() {
 
   return (
     <div>
+      <div className={classes.containerPrincipal}>
       {/* multiselect */}
       <FormControl className={classes.formControl}>
         <InputLabel id="demo-mutiple-chip-label">Escoja el servicio</InputLabel>
@@ -326,6 +327,7 @@ function MapBcn() {
           : ""}
 
       </MapContainer>
+    </div>
     </div>
   );
 }

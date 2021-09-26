@@ -4,9 +4,24 @@ import { useStyles } from "./style.js";
 import CardsInfoBcn from "../../components/component-card";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Backdrop from "@material-ui/core/Backdrop";
+// import { useTranslation } from "react-i18next";
+
 
 export default function BarrioDescription(props) {
   const classes = useStyles();
+
+  //lenguaje
+//   const [t, i18n] = useTranslation("global");
+
+//   let txtDescription = []; 
+// switch (i18n.options.lng) {
+//   case "es":
+//     txtDescription = props.barrios?.description_es;
+//     break;
+//   default:
+//     txtDescription =  props.barrios?.description_en;
+ 
+// }
 
   let [barrios, updateBarrios] = useState([]);
   const [isLoading, setLoading] = React.useState(true);

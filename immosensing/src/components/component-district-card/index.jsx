@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles } from "./style.js";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -10,7 +10,18 @@ import Grid from '@material-ui/core/Grid';
 
 function CardsDistrictBcn(props) {
   const classes = useStyles();
-  // const [t] = useTranslation("global");
+  const [t,i18n] = useTranslation("global");
+
+  let txt = ''; 
+  switch (i18n.options.lng) {
+    case "es":
+      txt = props.district?.description_es;      
+      break;
+    default:
+      txt = props.district?.description_en;   
+  };
+
+
   return (
     <React.Fragment>
       <div className={classes.root}>
@@ -26,7 +37,7 @@ function CardsDistrictBcn(props) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            {props.district?.description_es}
+            {txt}
           </Typography>
         </AccordionDetails>
       </Accordion>

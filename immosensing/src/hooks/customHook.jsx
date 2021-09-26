@@ -15,7 +15,7 @@ export function useSession(){
 
 //Eliminar el token
 
-export const removeToken = () => { 
+export const useRemoveToken = () => { 
     return sessionStorage.removeItem("token");
   }
 

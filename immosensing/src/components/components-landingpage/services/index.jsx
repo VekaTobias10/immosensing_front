@@ -11,46 +11,49 @@ export default function ServicesLanding() {
   const [t] = useTranslation("global");
 
   return (
-    <div className={classes.mainContainerServices} id={'ServicesLanding'}>
+    <div className={classes.mainContainerServices} id={"ServicesLanding"}>
       <div className={classes.servicesContainer}>
-        <div className={classes.internalContainerServices}>
-          <h1 className={classes.titleService}>{t("cardService.title")}</h1>
-        </div>
-        <div className={classes.containersCard}>
-        <Card color='secondary' className={classes.root}>
-          <LocationOnTwoToneIcon
-            className={classes.iconServices}
-          ></LocationOnTwoToneIcon>
-          <CardContent>
-            <Typography variant="body2"component="p">
-              {t("cardService.serviceOne")}
-            </Typography>
-          </CardContent>
-        </Card>
+        {/* <div className={classes.internalContainerServices}> */}
+          <h1 className={classes.titleService}>
+            {t("cardService.titleService")}
+          </h1>
+          <div className={classes.containersCard}>
+          <Card color="secondary" className={classes.root}>
+            <LocationOnTwoToneIcon
+              className={classes.iconServices}
+            ></LocationOnTwoToneIcon>
+            <CardContent>
+              <Typography variant="body2" component="p">
+                {t("cardService.serviceOne")}
+              </Typography>
+            </CardContent>
+          </Card>
 
-        <Card color='secondary' className={classes.root}>
-          <FindInPageTwoToneIcon
-            className={classes.iconServices}
-          ></FindInPageTwoToneIcon>
-          <CardContent>
-            <Typography variant="body2" component="p">
-              {t("cardService.serviceTwo")}
-            </Typography>
-          </CardContent>
-        </Card>
+          <Card color="secondary" className={classes.root}>
+            <FindInPageTwoToneIcon
+              className={classes.iconServices}
+            ></FindInPageTwoToneIcon>
+            <CardContent>
+              <Typography variant="body2" component="p">
+                {t("cardService.serviceTwo")}
+              </Typography>
+            </CardContent>
+          </Card>
 
-        <Card color='secondary' className={classes.root}>
-          <MonetizationOnTwoToneIcon
-            className={classes.iconServices}
-          ></MonetizationOnTwoToneIcon>
-          <CardContent>
-            <Typography variant="body2" component="p">
-              {t("cardService.serviceThree")}
-            </Typography>
-          </CardContent>
-        </Card>
+          <Card color="secondary" className={classes.root}>
+            <MonetizationOnTwoToneIcon
+              className={classes.iconServices}
+            ></MonetizationOnTwoToneIcon>
+            <CardContent>
+              <Typography variant="body2" component="p">
+                {t("cardService.serviceThree")}
+              </Typography>
+            </CardContent>
+          </Card>
         </div>
-      </div>
+        </div>
+    
+      {/* </div> */}
     </div>
   );
 }

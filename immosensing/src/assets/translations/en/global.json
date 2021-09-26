@@ -1,12 +1,13 @@
 {
     "navbar": {
-        "who_are_we": "Who are we?",
-        "what_do_we": "¿What do we?",
-        "patrocinador": "Sponsors",
-        "acceso": "Log-In",
-        "logOut": "Log-Out",
+        "who_are_we": "SERVICES",
+        "what_do_we": "OUR MISION",
+        "patrocinador": "SPONSOR",
+        "acceso": "Login",
+        "logOut": "Logout",
         "home": "Home",
-        "homeUser":"User"
+        "homeUser":"User",
+        "mapBcn":"Sites of interest "
     },
     "header": {
         "welcome": "Immosensing",
@@ -19,6 +20,7 @@
         "text-msg": "We know that buying a home is the biggest investment of your life, and nowadays, we seem to have much more information about our daily digital purchases than about where we are going to spend our lives. Immosensing's goal is to provide the best location and offers based on your preferences when looking for a place to live."
     },
     "cardService": {
+        "titleService": "Services",
         "serviceOne": "Insert your preferences and we will find the best location for you based on Earth Observation data and our AI algorithms.",
         "serviceTwo": "We will find a match between your preferences and your ideal home either for renting, buying or investing.",
         "serviceThree": "Buyers and investors find a perfect location. Real estate agents find a curated list of demand."
@@ -65,12 +67,18 @@
         
     },
     "map":{
-       "neighborhood": "Neighborhood"
+       "neighborhood": "Neighborhood",
+       "title":"These are the points of interest in Barcelona"
     },
 
     "page":{
-        "logOut": "You're logged out"
-    }
+        "logOut": "You're logged out",
+        "pertenece":"Here you can find the homes that correspond to "
+    },
+    "cardBarrios":{
+        "text":"Belongs to the district ",
+        "pertenece":"Here you can find the homes that correspond to "
+      }
 
     
 }

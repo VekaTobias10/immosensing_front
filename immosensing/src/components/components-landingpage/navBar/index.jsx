@@ -15,7 +15,12 @@ export default function NavBar() {
   const classes = useStyles();
   const [t, i18n] = useTranslation("global");
   const isAuth = useAuth();
-  // const isNotAuth = removeToken();
+
+  //lenguaje
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+}
+
   const { isDark, changeTheme } = useContext(ThemeContext);
 
   const handleChangeTheme = () => {
@@ -87,8 +92,7 @@ export default function NavBar() {
                   <Link className={classes.btnAccessDeco} to="/mapBcn">
                     {t("navbar.mapBcn")}
                   </Link>
-                </MenuItem>
-              </React.Fragment>
+                </MenuItem>              </React.Fragment>
             ) : (
               ""
             )}
@@ -96,14 +100,14 @@ export default function NavBar() {
           <Button
             variant="outlined"
             className={classes.button_lang}
-            onClick={() => i18n.changeLanguage("es")}
+            onClick={() => { i18n.options.lng = "es"; changeLanguage('es') }}
           >
             ES
           </Button>
           <Button
             variant="outlined"
             className={classes.button_lang2}
-            onClick={() => i18n.changeLanguage("en")}
+            onClick={() => { i18n.options.lng = "en"; changeLanguage('en') }}
           >
             EN
           </Button>

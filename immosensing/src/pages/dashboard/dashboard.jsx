@@ -5,9 +5,11 @@ import Grid from '@material-ui/core/Grid';
 import CardsDistrictBcn from "../../components/component-district-card/index";
 import MapBcn from "../../components/map-component/map.jsx";
 import NavBar from "../../components/components-landingpage/navBar/index";
+import { useTranslation } from "react-i18next";
 
 function Dashboard() {
   const classes = useStyles();
+  const [t] = useTranslation("global");
   let [district, updateDistricts] = useState([]);
 
   useEffect(() => {
@@ -33,10 +35,10 @@ function Dashboard() {
 
       <Grid container direction="row" spacing={2}>
         <Grid item xs={12} md={6} lg={12}>
-          <h1 className={classes.titlePageMap}>Estos son los puntos de interés de Barcelona</h1>
+          <h1 className={classes.titlePageMap}>{t("map.title")}</h1>
           <MapBcn></MapBcn>
         </Grid>
-        <Grid item xs={12} md={6} lg={6}>
+        <Grid item xs={12} md={6} lg={12}>
           <div className={classes.containerCardsDistrictos}>
             <ul className={classes.listCards}>
               {district.map((d) => (

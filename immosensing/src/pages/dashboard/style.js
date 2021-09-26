@@ -9,7 +9,14 @@ export const useStyles = makeStyles((theme) => ({
         width:'100%'
     },
     titlePageMap:{
-        textAlign:'center'
+        textAlign:'center',
+        margin:'2rem',
+        [theme.breakpoints.down('sm')]: {
+         
+        marginTop: '2rem',
+        fontSize: '1.5rem'
+        }
+
     },
 
 

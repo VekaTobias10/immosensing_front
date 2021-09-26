@@ -8,14 +8,17 @@ export const useStyles = makeStyles((theme) => ({
         // backgroundImage: `url(${headerPhoto})`,
         background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${headerPhoto})`,
         position: 'relative',
-        paddingBottom: '14rem',
+        paddingBottom: '18rem',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         left: '0',
         top: '0',
         width: '100%',
-        height: '100%',
+        height: '100vh',
+        // [theme.breakpoints.down('sm')]: {
+        //  paddingBottom:'13rem'
+        // },
     },
     containerNavBar: {
         display: 'flex',
@@ -47,6 +50,9 @@ export const useStyles = makeStyles((theme) => ({
         width: '13%',
             [theme.breakpoints.down('sm')]: {
                 width: '50%',
+            },
+            [theme.breakpoints.down('md')]: {
+                width: '35%',
             }
 
     },
@@ -126,7 +132,8 @@ export const useStyles = makeStyles((theme) => ({
     buttonRegister: {
         color: theme.palette.primary.main,
         fontSize: '1.2rem',
-        borderColor:theme.palette.primary.main
+        borderColor:theme.palette.secondary.main,
+        textDecoration: 'none',
 
     },
     btnAccessDeco: {
@@ -152,11 +159,7 @@ export const useStyles = makeStyles((theme) => ({
         width: '25%',
         margin: '2rem auto -17rem;',
         padding: '1rem',
-        color:theme.palette.secondary.main,
-        [theme.breakpoints.down('sm')]: {
-            width: '80%',
-            margin: '2rem auto -17rem',
-        }
+        color:theme.palette.secondary.main
 
     },
     buttonSearch: {
