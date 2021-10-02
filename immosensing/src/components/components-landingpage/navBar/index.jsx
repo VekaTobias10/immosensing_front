@@ -50,6 +50,7 @@ export default function NavBar() {
           >
             <MenuIcon />
           </IconButton>
+          
           <Menu
             id="simple-menu"
             anchorEl={anchorEl}
