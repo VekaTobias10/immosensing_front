@@ -35,7 +35,8 @@ ReactDOM.render(
     <App />
     </I18nextProvider>
     </ThemeWrapper>
-  </React.StrictMode>,
+  </React.StrictMode>
+  ,
   document.getElementById('root')
 );
 

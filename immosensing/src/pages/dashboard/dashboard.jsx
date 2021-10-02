@@ -42,7 +42,7 @@ function Dashboard() {
           <div className={classes.containerCardsDistrictos}>
             <ul className={classes.listCards}>
               {district.map((d) => (
-                <li className={classes.listItem} key={d.id}>
+                <li className={classes.listItem} key={d.di}>
                   <CardsDistrictBcn district={d}></CardsDistrictBcn>
                 </li>
               ))}
