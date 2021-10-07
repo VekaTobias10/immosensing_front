@@ -54,7 +54,8 @@ const handleClose = () => {
           }),
         };
         // llamo al registro
-        fetch("http://localhost:3001/auth/register", options)
+        // fetch("http://localhost:3001/auth/register", options)
+        fetch("/auth/register", options)
           .then((r) => r.json())
           .then((d) => {
             sessionStorage.setItem("token", d.access_token); 

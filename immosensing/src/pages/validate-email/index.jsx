@@ -20,7 +20,8 @@ function ValidateEmail() {
     const token = query.get("token"); // obtengo el query param del token
     if (token) {
       // llamamos a nuestro API para hacer check del validity
-      fetch(`http://localhost:3001/auth/validate?token=${token}`) // validamos tipo GET pasando el token por query param
+      // fetch(`http://localhost:3001/auth/validate?token=${token}`) // validamos tipo GET pasando el token por query param
+      fetch(`/auth/validate?token=${token}`) // validamos tipo GET pasando el token por query param
         .then((r) => {
           setLoading(false); // dejamos de cargar
           if (!r.ok) throw new Error("No se ha validado correctamente"); // si no okey lanzamos error que captura el catch
