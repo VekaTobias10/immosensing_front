@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { useStyles } from "./style.js";
 import { Button} from "@material-ui/core";
-// import { Card, TextField } from "@material-ui/core";
-// import { Search } from "@material-ui/icons";
 import { useTranslation } from "react-i18next";
 import logoimmosensing from "../../../assets/img/landingpage-img/logoimmosensing.png";
 import NavBar from '../navBar/index';
@@ -12,7 +10,6 @@ import { useAuth } from "../../../hooks/customHook";
 export default function HeaderLanding() {
   const classes = useStyles();
   const isAuth = useAuth();
-  // const isNotAuth =useRemoveToken();
   const [t] = useTranslation("global");
   
  
