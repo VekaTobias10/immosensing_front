@@ -20,7 +20,8 @@ function Dashboard() {
 
     async function fetchBcnDistrict() {
       let apiDistrict = await fetch(
-        "http://localhost:3001/infoBcn/districtBcn"
+        // "http://localhost:3001/infoBcn/districtBcn"
+        "/infoBcn/districtBcn"
       );
       apiDistrict = await apiDistrict.json();
       updateDistricts(apiDistrict);
