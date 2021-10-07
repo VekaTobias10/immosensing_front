@@ -27,7 +27,8 @@ export default function BarrioDescription(props) {
   const [isLoading, setLoading] = React.useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/preferences/BarriosBcn`)
+    // fetch(`http://localhost:3001/preferences/BarriosBcn`)
+    fetch(`/preferences/BarriosBcn`)
       .then((r) => r.json())
       .then((b) => {
         updateBarrios(b)
