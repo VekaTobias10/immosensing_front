@@ -41,7 +41,7 @@ export default function Login() {
       };
       // llamo al login
       // fetch("http://localhost:3001/auth/login", options)
-      fetch("/auth/login", options) 
+      fetch("https://immosensing.herokuapp.com/auth/login", options) 
         .then((r) => r.json())
         .then((d) => {
           sessionStorage.setItem("token", d.access_token);

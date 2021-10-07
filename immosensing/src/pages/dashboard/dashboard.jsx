@@ -21,7 +21,7 @@ function Dashboard() {
     async function fetchBcnDistrict() {
       let apiDistrict = await fetch(
         // "http://localhost:3001/infoBcn/districtBcn"
-        "/infoBcn/districtBcn"
+        "https://immosensing.herokuapp.com/infoBcn/districtBcn"
       );
       apiDistrict = await apiDistrict.json();
       updateDistricts(apiDistrict);

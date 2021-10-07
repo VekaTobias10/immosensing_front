@@ -28,7 +28,7 @@ export default function BarrioDescription(props) {
 
   useEffect(() => {
     // fetch(`http://localhost:3001/preferences/BarriosBcn`)
-    fetch(`/preferences/BarriosBcn`)
+    fetch(`https://immosensing.herokuapp.com/preferences/BarriosBcn`)
       .then((r) => r.json())
       .then((b) => {
         updateBarrios(b)
