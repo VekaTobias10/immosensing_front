@@ -242,7 +242,7 @@ console.log(names);
         />
 
         {servicios.length === 0 || servicios?.some((s) => s === "Comisarias")
-          ? comisarias && comisarias?.map((c, i) => (
+          ? comisarias !== null && comisarias?.map((c, i) => (
               <Marker
                 key={i}
                 position={[c.geo_epgs_4326_x, c.geo_epgs_4326_y]}
@@ -261,7 +261,7 @@ console.log(names);
 
         {servicios?.length === 0 ||
         servicios?.some((s) => s === "Atención primaria")
-          ? atencionPrimaria && atencionPrimaria?.map((a, i) => (
+          ? atencionPrimaria !== null && atencionPrimaria?.map((a, i) => (
               <Marker
                 key={i}
                 position={[a.geo_epgs_4326_x, a.geo_epgs_4326_y]}
@@ -279,7 +279,7 @@ console.log(names);
           : ""}
 
         {servicios.length === 0 || servicios?.some((s) => s === "Consulados")
-          ? consulados && consulados?.map((c, i) => (
+          ? consulados !== null && consulados?.map((c, i) => (
               <Marker
                 key={i}
                 position={[c.geo_epgs_4326_x, c.geo_epgs_4326_y]}
@@ -297,7 +297,7 @@ console.log(names);
           : ""}
 
         {servicios.length === 0 || servicios?.some((s) => s === "Aparcamientos")
-          ? aparcamientos && aparcamientos?.map((a, i) => (
+          ? aparcamientos !== null && aparcamientos?.map((a, i) => (
               <Marker
                 key={i}
                 position={[a.geo_epgs_4326_x, a.geo_epgs_4326_y]}
@@ -315,7 +315,7 @@ console.log(names);
           : ""}
 
         {servicios.length === 0 || servicios?.some((s) => s === "Bibliotecas")
-          ? bibliotecas && bibliotecas?.map((a, i) => (
+          ? bibliotecas !== null && bibliotecas?.map((a, i) => (
               <Marker
                 key={i}
                 position={[a.geo_epgs_4326_x, a.geo_epgs_4326_y]}
@@ -334,7 +334,7 @@ console.log(names);
 
         {servicios.length === 0 ||
         servicios?.some((s) => s === "Espacios Infantiles")
-          ? espaciosInfantiles && espaciosInfantiles?.map((e, i) => (
+          ? espaciosInfantiles !== null && espaciosInfantiles?.map((e, i) => (
               <Marker
                 key={i}
                 position={[e.geo_epgs_4326_x, e.geo_epgs_4326_y]}
@@ -353,7 +353,7 @@ console.log(names);
 {/* 
         {servicios.length === 0 ||
         servicios?.some((s) => s === "Parques y Jardines")
-          ? parquesYJardines && parquesYJardines?.map((p, i) => (
+          ? parquesYJardines !== null && parquesYJardines?.map((p, i) => (
               <Marker
                 key={i}
                 position={[p.geo_epgs_4326_x, p.geo_epgs_4326_y]}
@@ -372,7 +372,7 @@ console.log(names);
 
         {servicios.length === 0 ||
         servicios?.some((s) => s === "Cines y Teatros")
-          ? CinesYTeatros && CinesYTeatros?.map((t, i) => (
+          ? CinesYTeatros !== null && CinesYTeatros?.map((t, i) => (
               <Marker
                 key={i}
                 position={[t.geo_epgs_4326_x, t.geo_epgs_4326_y]}

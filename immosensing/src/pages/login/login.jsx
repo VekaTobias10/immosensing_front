@@ -40,7 +40,8 @@ export default function Login() {
         }),
       };
       // llamo al login
-      fetch("http://localhost:3001/auth/login", options)
+      // fetch("http://localhost:3001/auth/login", options)
+      fetch("/auth/login", options) 
         .then((r) => r.json())
         .then((d) => {
           sessionStorage.setItem("token", d.access_token);
@@ -115,9 +116,11 @@ export default function Login() {
             </Button>
 
             <p className={classes.link}>
-              {t("login.haveAccount")}
+              {t("login.haveAccount")} 
+              {/* Traduccion con i18next */}
               <Link className={classes.colorLink} to="/register">
                 {t("header.register")}
+                   {/* Traduccion con i18next */}
               </Link>
             </p>
           </form>
