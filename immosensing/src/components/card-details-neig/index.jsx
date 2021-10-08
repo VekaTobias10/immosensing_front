@@ -26,10 +26,10 @@ function CardsDetailsBarrios(props) {
       txt = eachBarrio?.description_en;   
   };
 
-  const baseURL = "http://localhost:3001/static/img/";
+  const baseURL = "https://immosensing.herokuapp.com/static/img/";
 
   useEffect(() => {
-    fetch(`http://localhost:3001/preferences/barrios/${name}`)
+    fetch(`https://immosensing.herokuapp.com/preferences/barrios/${name}`)
       .then((r) => r.json())
       .then((b) => updateEachBarrio(b))
       .catch((err) => err);
