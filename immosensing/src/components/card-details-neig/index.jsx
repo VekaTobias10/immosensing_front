@@ -29,6 +29,7 @@ function CardsDetailsBarrios(props) {
   const baseURL = "https://immosensing.herokuapp.com/static/img/";
 
   useEffect(() => {
+    // fetch(`https://immosensing.herokuapp.com/preferences/barrios/${name}`)
     fetch(`https://immosensing.herokuapp.com/preferences/barrios/${name}`)
       .then((r) => r.json())
       .then((b) => updateEachBarrio(b))
@@ -44,11 +45,11 @@ function CardsDetailsBarrios(props) {
           <Grid item xs={12} md={6} lg={5}>
           <img
               className={classes.photoBarrio}
-              src={baseURL + eachBarrio?.img}
+              src={baseURL + eachBarrio.img}
               alt="fotoBarrio"
             ></img>
             <div className={classes.containerText}>
-            <h2>{eachBarrio?.name}</h2>
+            <h2>{eachBarrio.name}</h2>
             <p className={classes.card}>{txt}</p>
           
             {/* <Typography variant="body2" color="textSecondary">
