@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useStyles } from "./style.js";
 // import { useTranslation } from "react-i18next";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 // import CardContent from "@material-ui/core/CardContent";
 // import Typography from "@material-ui/core/Typography";
@@ -26,10 +26,11 @@ function CardsDetailsBarrios(props) {
       txt = eachBarrio?.description_en;   
   };
 
-  const baseURL = "http://localhost:3001/static/img/";
+  const baseURL = "https://immosensing.herokuapp.com/static/img/";
 
   useEffect(() => {
-    fetch(`http://localhost:3001/preferences/barrios/${name}`)
+    // fetch(`https://immosensing.herokuapp.com/preferences/barrios/${name}`)
+    fetch(`https://immosensing.herokuapp.com/preferences/barrios/${name}`)
       .then((r) => r.json())
       .then((b) => updateEachBarrio(b))
       .catch((err) => err);
@@ -44,11 +45,11 @@ function CardsDetailsBarrios(props) {
           <Grid item xs={12} md={6} lg={5}>
           <img
               className={classes.photoBarrio}
-              src={baseURL + eachBarrio?.img}
+              src={baseURL + eachBarrio.img}
               alt="fotoBarrio"
             ></img>
             <div className={classes.containerText}>
-            <h2>{eachBarrio?.name}</h2>
+            <h2>{eachBarrio.name}</h2>
             <p className={classes.card}>{txt}</p>
           
             {/* <Typography variant="body2" color="textSecondary">
