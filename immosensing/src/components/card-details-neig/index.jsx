@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useStyles } from "./style.js";
 // import { useTranslation } from "react-i18next";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 // import CardContent from "@material-ui/core/CardContent";
 // import Typography from "@material-ui/core/Typography";
